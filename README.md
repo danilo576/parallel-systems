@@ -51,3 +51,7 @@ Za samostalan rad na manjim zadacima dovoljna je grana `main`.
 Kada uvodiš novi format, prvo proveri pravila ignorisanja. Ako fajl nedostaje u `git status`,
 koristi `git check-ignore -v "putanja/do/fajla"`.
 Ne dodaj lozinke, tokene ili privatne podatke u kod i beleške.
+
+## Napredak
+
+- Podešen GitHub repozitorijum i proveren prvi samostalni push.
