@@ -1,0 +1,110 @@
+
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "mpiProcesses",
+      "type": "promptString",
+      "description": "Broj MPI procesa",
+      "default": "4"
+    },
+    {
+      "id": "openmpThreads",
+      "type": "promptString",
+      "description": "Broj OpenMP niti",
+      "default": "4"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "Build MPI",
+      "type": "shell",
+      "command": "/opt/homebrew/bin/mpicc",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "dependsOn": [],
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Build OpenMP",
+      "type": "shell",
+      "command": "/opt/homebrew/bin/gcc-16",
+      "args": [
+        "-fopenmp",
+        "-isysroot",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Execute MPI (4 processes)",
+      "type": "process",
+      "command": "/bin/sh",
+      "args": [
+        "-c",
+        "/opt/homebrew/bin/mpicc \"$1\" -o \"$2\" && exec /opt/homebrew/bin/mpirun -np \"$3\" \"$2\"",
+        "mpi",
+        "${file}",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "${input:mpiProcesses}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Execute OpenMP",
+      "type": "shell",
+      "command": "${fileDirname}/${fileBasenameNoExtension}",
+      "options": {
+        "env": {
+          "OMP_NUM_THREADS": "${input:openmpThreads}"
+        }
+      },
+      "dependsOn": "Build OpenMP",
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build and run MPI or OpenMP",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "type": "process",
+      "command": "/bin/sh",
+      "args": [
+        "-c",
+        "case \"$1\" in\n  */01\\ -\\ MPI/*.c) kind=mpi; label='Broj MPI procesa'; default_count=$3 ;;\n  */02\\ -\\ OpenMP/*.c) kind=openmp; label='Broj OpenMP niti'; default_count=$4 ;;\n  *) printf '%s\\n' 'Otvori C fajl u folderu 01 - MPI ili 02 - OpenMP.' >&2; exit 1 ;;\nesac\nprintf '%s [%s]: ' \"$label\" \"$default_count\"\nIFS= read -r count || exit 1\ncount=${count:-$default_count}\ncase \"$count\" in\n  *[!0-9]*|0*) printf '%s\\n' 'Unesi pozitivan ceo broj.' >&2; exit 1 ;;\nesac\nif [ \"$kind\" = mpi ]; then\n  diagnostics=$(mktemp) || exit 1\n  /opt/homebrew/bin/mpicc \"$1\" -o \"$2\" 2>\"$diagnostics\"\n  status=$?\n  sed '/^ld: warning: building for macOS-.*but linking with dylib .*libmpi[.]40[.]dylib.*which was built for newer version /d' \"$diagnostics\" >&2\n  rm -f \"$diagnostics\"\n  [ \"$status\" -eq 0 ] || exit \"$status\"\n  exec /opt/homebrew/bin/mpirun -np \"$count\" \"$2\"\nelse\n  /opt/homebrew/bin/gcc-16 -fopenmp -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk \"$1\" -o \"$2\" && OMP_NUM_THREADS=\"$count\" exec \"$2\"\nfi",
+        "parallel-build",
+        "${file}",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "4",
+        "4"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "presentation": {
+        "echo": false,
+        "clear": true,
+        "reveal": "always",
+        "focus": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}

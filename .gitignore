@@ -1,0 +1,34 @@
+# Verzionišemo kod, tekstualne beleške i podešavanja.
+# Ostali fajlovi (literatura, binarni programi, sistemski fajlovi) ostaju lokalni.
+*
+!*/
+!.gitignore
+!.gitattributes
+!*.c
+!*.h
+!*.cpp
+!*.hpp
+!*.cu
+!*.cuh
+!*.md
+!*.txt
+!*.sh
+!*.py
+!Makefile
+!CMakeLists.txt
+!.vscode/tasks.json
+!.vscode/c_cpp_properties.json
+
+# Generisani fajlovi i lokalna podešavanja, bez obzira na ekstenziju.
+.git/
+.DS_Store
+build/
+bin/
+out/
+*.dSYM/
+__pycache__/
+.venv/
+.env
+.env.*
+CMakeCache.txt
+CMakeFiles/

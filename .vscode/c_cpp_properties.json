@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/opt/open-mpi/include"
+            ],
+            "defines": [],
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "macos-gcc-arm64",
+            "compilerPath": "/opt/homebrew/bin/gcc-16",
+            "compilerArgs": [
+                "-fopenmp",
+                "-isysroot",
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+            ]
+        }
+    ],
+    "version": 4
+}
