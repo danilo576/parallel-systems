@@ -32,3 +32,6 @@ __pycache__/
 .env.*
 CMakeCache.txt
 CMakeFiles/
+
+# Lokalni materijali za Paralelne sisteme.
+/01 - Current Accreditation/04 - Additional Materials/Paralelni sistemi/
