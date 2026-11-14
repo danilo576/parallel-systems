@@ -1,0 +1,112 @@
+/*
+2. Napisati OpenMP kod koji sadrži sledeću petlju:
+for (i=0;i<m;i++)
+    for (j=2;j<n;j++)
+        a[i][j]=2*a[i][j-2];
+*/
+#include <iostream>
+#include <omp.h>
+#include <cstdio>
+#include <ctime>
+
+#define N 20000
+#define M 20000
+
+int main()
+{
+    int** A_seq = new int* [M];
+    int** A_parallel = new int* [M];
+
+    for (int i = 0; i < M; i++)
+    {
+        A_seq[i] = new int[N];
+        A_parallel[i] = new int[N];
+    }
+
+    printf("Elementi matrice A:\n");
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            A_seq[i][j] = i+j;
+            A_parallel[i][j] = A_seq[i][j];
+            //printf("%d \t", A_seq[i][j]);
+        }
+       // printf("\n");
+    }
+    printf("\n");
+
+    double start = omp_get_wtime();
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 2; j < N; j++)
+        {
+            A_seq[i][j] = 2 * A_seq[i][j-2];
+        }
+    }
+    double stop = omp_get_wtime();
+    double time_of_execution = stop - start;
+
+    printf("Elementi transformisane matrice A:\n");
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+           // printf("%d \t", A_seq[i][j]);
+        }
+       // printf("\n");
+    }
+    printf("\n");
+    printf("Vreme izvrsenja sekvencijalnog programa je: %lf ms. \n", time_of_execution);
+
+
+
+    int num_of_proc = omp_get_num_procs();
+    int TILE_SIZE = N / num_of_proc;
+
+    start = omp_get_wtime();
+
+    //na labu je bilo dovoljno samo da se paralelizuje prva petlja jer kao nema zavisnosti, ako se to uradi, onda je vreme uvek sporije nego sekvencijalno, ali nema veze, dobijes max poena (milan lukic je dobio msm)
+    //sa TILE_SIZE je komplet resen zadatak i brze radi nego sekvencijalni kod ~TopG.
+    #pragma omp parallel for num_threads(num_of_proc)
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 2; j < N; j += TILE_SIZE)
+        {
+            int end = j + TILE_SIZE;
+            if (end > N)
+                end = N;
+
+            for (int k = j; k < end; k++)
+            {
+                A_parallel[i][k] = 2 * A_parallel[i][k - 2];
+            }
+        }
+    }
+
+    stop = omp_get_wtime();
+    time_of_execution = stop - start;
+
+    printf("Elementi transformisane matrice A:\n");
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+          //  printf("%d \t", A_parallel[i][j]);
+        }
+       // printf("\n");
+    }
+    printf("\n");
+    printf("Vreme izvrsenja paralelnog programa je: %lf ms. \n", time_of_execution);
+
+
+    // Oslobađanje alocirane memorije
+    for (int i = 0; i < M; i++) {
+        delete[] A_seq[i];
+        delete[] A_parallel[i];
+    }
+    delete[] A_seq;
+    delete[] A_parallel;
+
+    return 0;
+}

@@ -1,0 +1,3 @@
+https://github.com/sssteeefaaan/VIII-Semestar/tree/main/Paralelni%20Sistemi/Lab/Laboratorijske%20Ve%C5%BEbe%202022/Lab%205/OpenMP/Project1
+
+https://github.com/andrijacenicelfak/PS-OpenMP
