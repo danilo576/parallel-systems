@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include "../mpi_helpers.h"
+#include "../../common/mpi_helpers.h"
 
 #define N 3
 #define R 4
