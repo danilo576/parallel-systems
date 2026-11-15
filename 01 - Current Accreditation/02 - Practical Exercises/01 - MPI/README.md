@@ -12,6 +12,7 @@
 | [exercises/cyclic_matrix_product](exercises/cyclic_matrix_product) | Ciklična raspodela kolona, kod i skica |
 | [exercises/column_matrix_product](exercises/column_matrix_product) | Blokovska raspodela kolona, kod i skica |
 | [exercises/column_matrix_vector_product](exercises/column_matrix_vector_product) | Proizvod matrice i vektora, uzastopne kolone i grupne operacije |
+| [exercises/column_matrix_vector_min](exercises/column_matrix_vector_min) | Samostalan rad: proizvod matrice i vektora i minimum svake vrste |
 
 ## Zajednički fajlovi
 
