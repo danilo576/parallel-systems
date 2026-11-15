@@ -11,6 +11,7 @@
 | [exercises/matrix_product](exercises/matrix_product) | Množenje sa delimičnim doprinosima rezultatu |
 | [exercises/cyclic_matrix_product](exercises/cyclic_matrix_product) | Ciklična raspodela kolona, kod i skica |
 | [exercises/column_matrix_product](exercises/column_matrix_product) | Blokovska raspodela kolona, kod i skica |
+| [exercises/column_matrix_vector_product](exercises/column_matrix_vector_product) | Proizvod matrice i vektora, uzastopne kolone i grupne operacije |
 
 ## Zajednički fajlovi
 
