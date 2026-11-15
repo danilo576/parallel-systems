@@ -33,6 +33,8 @@ Nisu potrebni slanje vektora B, dodatne potvrde prijema ili barijere.
 
 ## Primer za tri procesa
 
+![Raspodela kolona i sabiranje doprinosa u procesu P2](distribution_sketch.png)
+
 ```text
        P0     P1     P2
 A = [ 1  2 | 3  4 | 5  6 ]
