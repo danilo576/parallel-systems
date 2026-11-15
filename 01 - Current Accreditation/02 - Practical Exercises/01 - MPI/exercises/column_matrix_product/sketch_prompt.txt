@@ -1,0 +1,9 @@
+Use case: scientific-educational. Create a portrait hand-drawn Serbian Latin study-note diagram on pale squared notebook paper. Red matrix outlines, purple annotations, orange P0, blue P1, green P2. Title: "MPI: blokovska raspodela kolona".
+
+Dimensions M=3, K=4, N=6, p=3, local_cols=N/p=2. Show A[3][4] × B[4][6] = C[3][6]. A rows: [0 1 2 3; 4 5 6 7; 8 9 10 11]. B rows: [0 1 2 3 4 5; 6 7 8 9 10 11; 12 13 14 15 16 17; 18 19 20 21 22 23]. Color columns 0,1 orange, 2,3 blue, 4,5 green.
+
+MPI_Bcast sends all A to every process. Master copies its own B columns locally and uses MPI_Send / MPI_Recv for P1 and P2, all columns per process sent together directly from B. Local B: P0 [0 1;6 7;12 13;18 19], P1 [2 3;8 9;14 15;20 21], P2 [4 5;10 11;16 17;22 23].
+
+Each computes local_C = A × local_B. Local C: P0 [84 90;228 250;372 410], P1 [96 102;272 294;448 486], P2 [108 114;316 338;524 562]. MPI_Gather assembles C at P0: [84 90 96 102 108 114;228 250 272 294 316 338;372 410 448 486 524 562].
+
+Technical notes: B vector(K, local_cols, N); C vector(M, local_cols, N); C resized extent = local_cols * sizeof(double). Each process sends M * local_cols elements; master receives 1 new_c_r per process. Show ownership grid [P0 P0 P1 P1 P2 P2] repeated across three rows. Explain vector determines row placement; resized determines the next process start. Accurate numbers and legible text, no cyclic distribution or reductions.
