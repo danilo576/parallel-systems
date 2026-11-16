@@ -1,0 +1,34 @@
+Use case: scientific-educational. The user's attached handwritten MPI sketch is the reference image. Redraw it as a cleaner, more understandable educational study sheet in Serbian Latin, preserving its central visual idea of a colored actual 8x8 matrix A multiplied by an 8-element vector b, process ownership, and communication arrows. Crucial change from the reference: final assembly MUST be REDUCE across process rows FIRST, THEN GATHER down the selected process column into P15. Use the current algorithm described below as authoritative. Do not reproduce handwritten code errors. Create a polished high resolution landscape study sheet with a subtle cream paper background, crisp readable type, restrained colored pencil highlights, generous margins, well-separated diagrams, clean arrows. Prefer diagrams with short labels instead of long prose or full source listings.
+
+Title "Mnozenje matrice i vektora — 03.07.2020."
+Subtitle "N = 8 | p = 16 | q = 4 | s = N/q = 2".
+Three coherent visual sections across the sheet, with a bottom worked example.
+LEFT SECTION "Raspodela podataka": prominently draw A as an 8x8 grid, indices 0..7 on both axes, no need to print 64 numeric entries. Assign a distinct consistent color to each process ownership, with legend or process grid below. A process P(4*r+c) owns the TWO contiguous rows 2*r and 2*r+1 and the TWO strided columns c and c+4, for r,c=0..3. Thus P0 owns rows0,1 columns0,4; P1 rows0,1 columns1,5; P2 rows0,1 columns2,6; P3 rows0,1 columns3,7; P4 rows2,3 columns0,4; etc through P15 rows6,7 columns3,7. Color both separated columns' cells identically for each process, matching the user's matrix sketch. Beside A show multiplication sign and vertical b with 8 labeled entries b[0]..b[7], colored by four repeated column groups (indices0,4 blue;1,5 green;2,6 orange;3,7 purple). Caption "A[N][N] × b[N] = c[N]". Show small example of P1 with rows 0,1 and columns1,5: local_a = [[2,6],[10,14]], local_b = [2,6], local_c = [40,104]. Local_c is only a partial sum.
+MIDDLE SECTION "Vektor b: Scatter pa Bcast": diagram of the 4x4 process grid with row-major ranks P0 P1 P2 P3 / P4 P5 P6 P7 / P8 P9 P10 P11 / P12 P13 P14 P15. Each node in a process column shows respectively [1,5], [2,6], [3,7], [4,8]. Orange arrows from P0 to P1,P2,P3 along the first row, caption "Scatter: row == 0, row_comm, root = 0". Blue arrows from each first-row process downward in its column, caption "Bcast: col_comm, root = 0". Brief note "Isti deo b u celoj koloni mreze".
+RIGHT SECTION "Rezultat: Reduce pa Gather": show another 4x4 grid of process nodes with room for arrows and output pairs. In each process row draw three green converging arrows from its first three nodes INTO its fourth node. Label green arrows "Reduce — MPI_SUM" and "row_comm, root = result_col = 3". Correct rows of source and destination nodes P0,P1,P2 to P3; P4,P5,P6 to P7; P8,P9,P10 to P11; P12,P13,P14 to P15. Each root also contributes its own local_c. Fourth-column nodes hold these EXACT pairs: P3 [204,492], P7 [780,1068], P11 [1356,1644], P15 [1932,1700]. Then show purple gather arrows FROM P3,P7,P11 INTO P15, drawn off to the right so they do not cross labels. Caption "Gather: col == result_col" and "col_comm, root = result_row = 3". Highlight P15 as final owner. Note "Minimum A = -1 u a[7][7], proces P15". Show equations "result_row = 15 / 4 = 3" and "result_col = 15 % 4 = 3". Final vector full and exact "c = [204, 492, 780, 1068, 1356, 1644, 1932, 1700]".
+BOTTOM worked example for first row of processes: "[26,74] + [40,104] + [58,138] + [80,176] = [204,492]" with process labels P0, P1, P2, P3 aligned under corresponding terms. Caption "Reduce sabira doprinose za iste elemente c. Gather spaja gotove delove c." Footer "Strelice prikazuju logicki tok podataka grupnih operacija." Preserve correct numbers, indices, node ranks, and legibility. No Gather-before-Reduce algorithm. No decorative badges.
+
+Final correction prompt
+Edit this image with exactly one correction. In the bottom-left 'Primer: proces P1' panel, the purple formula strip must read exactly 'local_c = local_a · local_b = [40, 104]'. Currently the second number is wrongly rendered 1041. Correct it to 104, with a clearly separated closing square bracket. Preserve all other numbers, diagrams, text, layout, colors, arrows and design unchanged.
+
+
+Ownership coloring correction
+Edit this educational diagram to correct the ownership coloring of matrix A in the left panel and its 4x4 process-grid legend. Preserve the remaining middle and right panels, formulas, numbers, layout, and all communication arrows.
+Each of the SIXTEEN processes must have its OWN DISTINCT color. The 8x8 A grid must show exact process ownership using the following explicit 8 rows of process labels, one label INSIDE EVERY CELL, with each process using the same color everywhere:
+row0: P0 P1 P2 P3 P0 P1 P2 P3
+row1: P0 P1 P2 P3 P0 P1 P2 P3
+row2: P4 P5 P6 P7 P4 P5 P6 P7
+row3: P4 P5 P6 P7 P4 P5 P6 P7
+row4: P8 P9 P10 P11 P8 P9 P10 P11
+row5: P8 P9 P10 P11 P8 P9 P10 P11
+row6: P12 P13 P14 P15 P12 P13 P14 P15
+row7: P12 P13 P14 P15 P12 P13 P14 P15
+Use 16 distinguishable muted colors, with high contrast readable black process labels. Enlarge the A grid within the left panel if necessary so P10..P15 fit. Color palette mapping exact:
+P0 sky blue, P1 pale lime, P2 apricot, P3 lavender,
+P4 salmon, P5 pale yellow, P6 mint green, P7 rose pink,
+P8 light teal, P9 beige sand, P10 lilac pink, P11 light slate blue,
+P12 warm orange, P13 sage green, P14 mauve, P15 pale cyan.
+The small 4x4 process-grid legend below A must use those same sixteen individual colors, row-major P0..P15.
+Keep vector b using its existing four repeated colors, as these represent column-index groups, with its existing legend. This is intentional.
+In the P1 example ensure the formula ends clearly with '[40, 104]' with extra space before closing bracket so it cannot look like 1041.
+Everything else should be faithfully preserved. Title and Serbian Latin text unchanged. Main objective: A is colored by process ownership with 16 distinct process colors and explicit process labels in every matrix cell, making each process's four cells unambiguous.

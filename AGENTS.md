@@ -9,6 +9,11 @@
 - Imena izvornih fajlova piši na engleskom jeziku, uz odgovarajuću ekstenziju (npr. `mpi_chain.c`).
 - Biraj što jednostavnije rešenje koje ispunjava zadatak. Ne dodaj nepotrebnu sinhronizaciju, dodatne potvrde prijema ili složeno formatiranje izlaza.
 
+- Ne koristi `MPI_Type_free` u rešenjima zadataka.
+- Ne koristi `MPI_Comm_free` u rešenjima zadataka.
+- Ne koristi `MPI_Allreduce` u rešenjima zadataka. Kada rezultat redukcije treba svim procesima, koristi `MPI_Reduce` i `MPI_Bcast`.
+- Za svaki MPI zadatak generiši sliku kao skicu raspodele podataka po procesima i relevantne komunikacije. Sačuvaj sliku uz zadatak i prikaži je u njegovom `README.md` fajlu.
+
 ## Dopunske GitHub reference
 
 Koristi ove izvore za dodatne primere pri rešavanju zadataka. Prednost daj materijalima iz projektnog foldera.
