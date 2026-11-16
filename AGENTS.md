@@ -13,6 +13,7 @@
 - Ne koristi `MPI_Comm_free` u rešenjima zadataka.
 - Ne koristi `MPI_Allreduce` u rešenjima zadataka. Kada rezultat redukcije treba svim procesima, koristi `MPI_Reduce` i `MPI_Bcast`.
 - Za svaki MPI zadatak generiši sliku kao skicu raspodele podataka po procesima i relevantne komunikacije. Sačuvaj sliku uz zadatak i prikaži je u njegovom `README.md` fajlu.
+- Za MPI zadatke sa logičkim uređenjem procesa koristi stil obojene skice iz `01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/exam_2020_07_03/matrix_vector_sketch.png`: prikaži stvarnu matricu sa obojenim vlasništvom elemenata, različitu i doslednu boju za svaki proces, logičku mrežu procesa i strelice relevantnih komunikacija. Raspodelu i indekse prilagodi konkretnom zadatku.
 
 ## Dopunske GitHub reference
 
