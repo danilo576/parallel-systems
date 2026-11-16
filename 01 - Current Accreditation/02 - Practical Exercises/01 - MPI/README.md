@@ -4,15 +4,16 @@
 
 | Folder | Sadržaj |
 | --- | --- |
-| [exercises/hello](exercises/hello) | Osnovni MPI program |
-| [exercises/chain](exercises/chain) | Lančana komunikacija |
-| [exercises/sum](exercises/sum) | Sabiranje |
-| [exercises/tree_sum](exercises/tree_sum) | Sabiranje u strukturi stabla |
-| [exercises/matrix_product](exercises/matrix_product) | Množenje sa delimičnim doprinosima rezultatu |
-| [exercises/cyclic_matrix_product](exercises/cyclic_matrix_product) | Ciklična raspodela kolona, kod i skica |
-| [exercises/column_matrix_product](exercises/column_matrix_product) | Blokovska raspodela kolona, kod i skica |
-| [exercises/column_matrix_vector_product](exercises/column_matrix_vector_product) | Proizvod matrice i vektora, uzastopne kolone i grupne operacije |
-| [exercises/column_matrix_vector_min](exercises/column_matrix_vector_min) | Samostalan rad: proizvod matrice i vektora i minimum svake vrste |
+| [exercises/basic_communication/hello](exercises/basic_communication/hello) | Osnovni MPI program |
+| [exercises/basic_communication/chain](exercises/basic_communication/chain) | Lančana komunikacija |
+| [exercises/basic_communication/sum](exercises/basic_communication/sum) | Sabiranje |
+| [exercises/basic_communication/tree_sum](exercises/basic_communication/tree_sum) | Sabiranje u strukturi stabla |
+| [exercises/matrix_matrix_products/matrix_product](exercises/matrix_matrix_products/matrix_product) | Množenje sa delimičnim doprinosima rezultatu |
+| [exercises/matrix_matrix_products/cyclic_matrix_product](exercises/matrix_matrix_products/cyclic_matrix_product) | Ciklična raspodela kolona, kod i skica |
+| [exercises/matrix_matrix_products/column_matrix_product](exercises/matrix_matrix_products/column_matrix_product) | Blokovska raspodela kolona, kod i skica |
+| [exercises/matrix_vector_products/column_matrix_vector_product](exercises/matrix_vector_products/column_matrix_vector_product) | Proizvod matrice i vektora, uzastopne kolone i grupne operacije |
+| [exercises/matrix_vector_products/column_matrix_vector_min](exercises/matrix_vector_products/column_matrix_vector_min) | Samostalan rad: proizvod matrice i vektora i minimum svake vrste |
+| [exercises/logical_process_grid](exercises/logical_process_grid) | Zadaci sa logičkom mrežom procesa — 12.06.2019, 03.07.2020. i 02.10.2023. |
 
 ## Zajednički fajlovi
 
@@ -23,7 +24,7 @@
 Za uključivanje helpera iz foldera zadatka koristi:
 
 ```c
-#include "../../common/mpi_helpers.h"
+#include "../../../common/mpi_helpers.h"
 ```
 
 Otvori izvorni `.c` fajl i pokreni postojeći VS Code zadatak **Build and run MPI or OpenMP**. On radi i iz podfoldera; novi izvršni fajl nastaje pored izvornog koda.

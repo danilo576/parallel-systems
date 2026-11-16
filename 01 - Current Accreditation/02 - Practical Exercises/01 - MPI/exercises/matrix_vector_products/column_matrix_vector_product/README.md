@@ -86,7 +86,7 @@ Broj procesa mora da deli M = 6: može biti 1, 2, 3 ili 6.
 
 ## Lokalni izvori
 
-- Postojeći primer `../column_matrix_product/mpi_column_matrix_product.c`:
+- Postojeći primer `../../matrix_matrix_products/column_matrix_product/mpi_column_matrix_product.c`:
   opis bloka kolona tipom `MPI_Type_vector` i promena extenta.
 - Dodatni materijali `Paralelni sistemi/elfak-parallel-systems-main/IzvedeniTipovi.md`:
   parametri izvedenog vektorskog tipa.

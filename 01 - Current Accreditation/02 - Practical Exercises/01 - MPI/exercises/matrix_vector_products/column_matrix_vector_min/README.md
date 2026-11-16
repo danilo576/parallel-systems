@@ -67,9 +67,9 @@ U rezultatu treba da postoje četiri minimuma, po jedan za svaku vrstu.
 
 ## Lokalni materijali za podsećanje
 
-- `../../materials/Izvedeni tipovi podataka.pdf`
-- `../../materials/MPI-grupne operacije.pdf`
-- `../../materials/mpi_function_reference.pdf`
+- `../../../materials/Izvedeni tipovi podataka.pdf`
+- `../../../materials/MPI-grupne operacije.pdf`
+- `../../../materials/mpi_function_reference.pdf`
 - Dodatno je pregledan lokalni primer `elfak-parallel-systems-main/Lab vežbe/Lab1/zad1/Source.cpp` iz `04 - Additional Materials/Paralelni sistemi`: primer raspodele matrice i nalaženja minimuma. To je drugi zadatak, pa ga koristi samo kao referencu.
 
 Prethodni zadatak u `../column_matrix_vector_product/` sadrži gotovo rešenje

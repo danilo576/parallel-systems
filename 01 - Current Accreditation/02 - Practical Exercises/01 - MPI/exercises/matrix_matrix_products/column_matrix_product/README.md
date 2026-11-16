@@ -2,7 +2,7 @@
 
 - `mpi_column_matrix_product.c` - rešenje zadatka; tekst zadatka je iznad funkcije `main`.
 - `distribution_sketch.png` - skica raspodele za M = 3, K = 4, N = 6 i 3 procesa.
-- `../../common/mpi_helpers.h` - zajednički helperi za prikaz matrica i raspodele.
+- `../../../common/mpi_helpers.h` - zajednički helperi za prikaz matrica i raspodele.
 
 ![Skica raspodele matrica](distribution_sketch.png)
 

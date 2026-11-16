@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include "../../common/mpi_helpers.h"
+#include "../../../common/mpi_helpers.h"
 
 #define N 8
 #define MCW MPI_COMM_WORLD
@@ -17,8 +17,8 @@
  * prikazuje u procesu koji sadrzi minimum matrice A. Slanje vektora b
  * i generisanje rezultata realizovati grupnim operacijama i novim
  * komunikatorima. Pretpostaviti da je n deljivo sa q.
- * a) Blok svakom drugom procesu poslati jednom MPI_Send naredbom,
- * koristeci count = 1 i izvedeni tip podataka.
+ * b) Slanje blokova matrice A realizovati grupnim operacijama
+ * i funkcijama za kreiranje novih komunikatora.
  */
 int main(int argc, char *argv[])
 {
@@ -69,18 +69,16 @@ int main(int argc, char *argv[])
     MPI_Type_vector(rows * cols, 1, q, MPI_DOUBLE, &block_type);
     MPI_Type_commit(&block_type);
 
-    if (rank == 0)
-    {
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < cols; j++)
-                local_a[i][j] = a[i][j * q];
-        for (int dest = 1; dest < size; dest++)
-            MPI_Send(&a[(dest / q) * rows][dest % q], 1, block_type,
-                     dest, 0, MCW);
-    }
-    else
-        MPI_Recv(local_a, rows * cols, MPI_DOUBLE, 0, 0,
-                 MCW, MPI_STATUS_IGNORE);
+    double row_a[rows][N];
+    MPI_Datatype block_resized;
+    MPI_Type_create_resized(block_type, 0, sizeof(double), &block_resized);
+    MPI_Type_commit(&block_resized);
+
+    if (col == 0)
+        MPI_Scatter(a, rows * N, MPI_DOUBLE, row_a, rows * N,
+                    MPI_DOUBLE, 0, col_comm);
+    MPI_Scatter(row_a, 1, block_resized, local_a, rows * cols,
+                MPI_DOUBLE, 0, row_comm);
 
     MPI_Type_vector(cols, 1, q, MPI_DOUBLE, &vector_type);
     MPI_Type_create_resized(vector_type, 0, sizeof(double), &vector_resized);
