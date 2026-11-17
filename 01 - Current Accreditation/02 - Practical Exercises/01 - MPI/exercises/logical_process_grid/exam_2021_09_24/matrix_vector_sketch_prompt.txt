@@ -1,0 +1,17 @@
+Use case: scientific-educational. Create a high resolution landscape Serbian Latin educational sheet, title "Mnozenje matrice i vektora — 24.09.2021." Subtitle "N=8, p=16, q=4, s=2". Attached image is STYLE REFERENCE ONLY: cream paper, pastel highlighted panels, clear readable diagrams. Algorithm below is authoritative.
+Left panel: actual 8x8 matrix A with global indices 0..7 both axes. Label EVERY cell with owner, use 16 distinct consistent pastel colors for P0..P15. Exact ownership rows:
+P0 P1 P2 P3 P0 P1 P2 P3
+P4 P5 P6 P7 P4 P5 P6 P7
+P8 P9 P10 P11 P8 P9 P10 P11
+P12 P13 P14 P15 P12 P13 P14 P15
+P0 P1 P2 P3 P0 P1 P2 P3
+P4 P5 P6 P7 P4 P5 P6 P7
+P8 P9 P10 P11 P8 P9 P10 P11
+P12 P13 P14 P15 P12 P13 P14 P15
+Beside matrix show actual vector b=[1,2,3,4,5,6,7,8], label indices 0..7; four index groups {0,4},{1,5},{2,6},{3,7}. These belong to process columns 0,1,2,3 and repeat down each column. Separate colored row-major 4x4 logical process grid P0..P15 as legend. Formula "P(r*q+t): A[r+i*q][t+j*q]".
+Middle panel "Raspodela": staged arrows with exact labels: "1. Scatter A: col==0, col_comm, root=0" P0 to P4,P8,P12, distributes cyclic row strips. "2. Scatter A: row_comm, root=0" each leftmost process to others in its row, whole local block in one reception. "3. Scatter b: row==0, row_comm, root=0" P0 to P1 P2 P3; "4. Bcast b: col_comm, root=0" each top process to its column.
+Bottom worked example P1 owns rows {0,4}, columns {1,5}: local_a=[[2,6],[34,38]], local_b=[2,6], local_c=[40,296]. Initialization A[i][j]=8*i+j+1 except A[7][7]=-1.
+Right panel "Rezultat: Reduce pa Gather": minimum selection "Reduce MINLOC + Bcast, MPI_COMM_WORLD, root=0", min=-1 at A[7][7], owner P15. 4x4 grid of nodes P0..P15, same process colors. Green horizontal arrows converging into last column: "Reduce SUM: row_comm, root=3". At P3 pair [204,1356], P7 [492,1644], P11 [780,1932], P15 [1068,1700]. Purple arrows from P3,P7,P11 into P15: "Gather: col==3, col_comm, root=3". Clearly label cyclic placement: P3 -> c[0],c[4]; P7 -> c[1],c[5]; P11 -> c[2],c[6]; P15 -> c[3],c[7]. Final c=[204,492,780,1068,1356,1644,1932,1700] at P15. Worked contribution sum for first process row: [26,218]+[40,296]+[58,378]+[80,464]=[204,1356], label P0 P1 P2 P3. Carefully preserve numbers and indices. No Scatterv, no point-to-point communication. Short labels, clean generous spacing, legible text, no code listing. Save as project educational diagram.
+
+Color consistency correction:
+Edit only the right panel's process node P12 (bottom-left cell of the Reduce grid): change its salmon background to the warm orange used for P12 in the left matrix, left process legend and middle panels. Preserve ALL labels, numbers, arrows, other colors and layout exactly. This is a color consistency correction only.

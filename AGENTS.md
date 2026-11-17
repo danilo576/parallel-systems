@@ -9,8 +9,10 @@
 - Imena izvornih fajlova piši na engleskom jeziku, uz odgovarajuću ekstenziju (npr. `mpi_chain.c`).
 - Biraj što jednostavnije rešenje koje ispunjava zadatak. Ne dodaj nepotrebnu sinhronizaciju, dodatne potvrde prijema ili složeno formatiranje izlaza.
 
+- Ne koristi `MPI_Type_create_hvector` u rešenjima zadataka. Koristi `MPI_Type_vector` uz `MPI_Type_create_resized` kada je potrebno prilagoditi extent.
 - Ne koristi `MPI_Type_free` u rešenjima zadataka.
 - Ne koristi `MPI_Comm_free` u rešenjima zadataka.
+- Ne koristi `MPI_Scatterv` u rešenjima zadataka. Za raspodelu koristi `MPI_Scatter` uz odgovarajuće izvedene tipove i komunikatore.
 - Ne koristi `MPI_Allreduce` u rešenjima zadataka. Kada rezultat redukcije treba svim procesima, koristi `MPI_Reduce` i `MPI_Bcast`.
 - Za svaki MPI zadatak generiši sliku kao skicu raspodele podataka po procesima i relevantne komunikacije. Sačuvaj sliku uz zadatak i prikaži je u njegovom `README.md` fajlu.
 - Za MPI zadatke sa logičkim uređenjem procesa koristi stil obojene skice iz `01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/logical_process_grid/exam_2020_07_03/matrix_vector_sketch.png`: prikaži stvarnu matricu sa obojenim vlasništvom elemenata, različitu i doslednu boju za svaki proces, logičku mrežu procesa i strelice relevantnih komunikacija. Raspodelu i indekse prilagodi konkretnom zadatku.
