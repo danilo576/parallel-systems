@@ -14,6 +14,7 @@
 | [exercises/matrix_vector_products/column_matrix_vector_product](exercises/matrix_vector_products/column_matrix_vector_product) | Proizvod matrice i vektora, uzastopne kolone i grupne operacije |
 | [exercises/matrix_vector_products/column_matrix_vector_min](exercises/matrix_vector_products/column_matrix_vector_min) | Samostalan rad: proizvod matrice i vektora i minimum svake vrste |
 | [exercises/logical_process_grid](exercises/logical_process_grid) | Zadaci sa logičkom mrežom procesa — 12.06.2019, 03.07.2020, 24.04.2021, 07.10.2021, 23.06.2022. i 02.10.2023. |
+| [exercises/virtual_topologies/exam_2023_04_25](exercises/virtual_topologies/exam_2023_04_25) | Virtuelne topologije, razmena unutar vrste između kolona iste parnosti — 25.04.2023. |
 
 ## Zajednički fajlovi
 
