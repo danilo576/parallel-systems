@@ -1,0 +1,23 @@
+Use case: scientific-educational. Create a high resolution landscape Serbian Latin educational sheet, using reference image ONLY for cream paper, pastel pencil colors and separated panels. Title "Mnozenje matrice i vektora — 24.04.2021." Subtitle "N=8, p=16, q=4, s=2". All following algorithm details override reference.
+LEFT distribution: actual 8x8 matrix A with global row and column indices 0..7. Every cell contains owner P number, following exact rows:
+P0 P1 P2 P3 P0 P1 P2 P3
+P4 P5 P6 P7 P4 P5 P6 P7
+P8 P9 P10 P11 P8 P9 P10 P11
+P12 P13 P14 P15 P12 P13 P14 P15
+P0 P1 P2 P3 P0 P1 P2 P3
+P4 P5 P6 P7 P4 P5 P6 P7
+P8 P9 P10 P11 P8 P9 P10 P11
+P12 P13 P14 P15 P12 P13 P14 P15.
+16 distinct consistent pastel colors for P0..P15, repeat precisely across all diagrams. Formula owner P(4r+t): rows r,r+4 and columns t,t+4. Initialization a[i][j]=8i+j+1; b[j]=j+1. Vector b vertical [1,2,3,4,5,6,7,8] labeled global indices0..7; four column groups {0,4},{1,5},{2,6},{3,7}. Vector group colors distinguish column groups, not individual process owners. Label "P0 → ostali: MPI_Send, count=1, block_type, MPI_COMM_WORLD". Derived datatype note "kolone: vector(s,1,q); vrste: hvector(s,1,q*N*sizeof(double))".
+MIDDLE vector distribution separate 4x4 process grid row major P0..P15 each node with own pastel color. Scatter arrows from P0 to P1,P2,P3 along top row, label "1. MPI_Scatter — row_comm (row=0), root=0". Each column respectively receives [1,5], [2,6], [3,7], [4,8]. Downward arrows from top node to other nodes in same column label "2. MPI_Bcast — col_comm, root=0". Note same b for entire process column.
+RIGHT result: "Maksimum: 64 u a[7][7] → P15". "MPI_Reduce(MAXLOC), MPI_COMM_WORLD, root=0; zatim MPI_Bcast, root=0". Separate 4x4 row-major grid colored consistently, three converging arrows from first three nodes in each row into final node of that row (root also contributes). label "3. MPI_Reduce(SUM), row_comm, root=result_col=3". P3 holds [204,1356] global indices0,4; P7 [492,1644] indices1,5; P11 [780,1932] indices2,6; P15 [1068,2220] indices3,7. Then arrows from P3,P7,P11 down into P15, label "4. MPI_Gather — col_comm (col=3), root=result_row=3". Caption "recvtype=vector_resized: ciklicni smestaj u c". Final c at P15 exact "[204, 492, 780, 1068, 1356, 1644, 1932, 2220]". Show gather places each pair at global positions (0,4),(1,5),(2,6),(3,7), not consecutive pairs.
+BOTTOM worked example P1: rows0,4 columns1,5; local_a=[[2,6],[34,38]], local_b=[2,6], local_c=[40,296]. Row reduction example P0 [26,218] + P1 [40,296] + P2 [58,378] + P3 [80,464] = [204,1356] for c[0],c[4]. Clearly separate distribution/local computation/result assembly. Generous space, readable typography, no full code listings. All numbers and indices must match exactly.
+
+Correction prompt:
+undefined
+
+
+Datatype correction: Replace hvector panel with column vector(s,1,q), resize extent to N*sizeof(double), outer vector(s,1,q,column_resized). Preserve all other content.
+
+Exact edit prompt:
+Edit ONLY the small pink panel in left third labeled 'Izvedeni tip podataka'. Replace its contents with heading 'Izvedeni tip podataka:' and three readable bullets: 'kolone: vector(s, 1, q)', 'extent: N * sizeof(double)', 'vrste: vector(s, 1, q, column_resized)'. This means resize column type to full global row length, then outer vector stride q. Eliminate hvector entirely. Preserve every other diagram, text, color, number and arrow exactly.
