@@ -1,0 +1,8 @@
+Edit existing MPI study sheet for 21.10.2025 to square matrices A(n*n), B(n*n), C(n*n), with n=q=2, p=4. Preserve cream paper pastel panels and process colors: P0 blue, P1 green, P2 orange, P3 purple.
+A=B=[[1,2],[3,4]]. A top row elements replicated on P0,P1; bottom row on P2,P3. B first column replicated on P0,P2; second column on P1,P3. Show split colors and both owning process labels in every input cell. Global indices 0,1.
+Master sends one complete A row and one complete B column to each other process with MPI_Send/MPI_Recv on MPI_COMM_WORLD; P0 copies its data locally. Column datatype MPI_Type_vector(n,1,n,MPI_DOUBLE).
+Separate process grid: P0(0,0) A=[1,2] B=[1,3] result7; P1(0,1) A=[1,2] B=[2,4] result10; P2(1,0) A=[3,4] B=[1,3] result15; P3(1,1) A=[3,4] B=[2,4] result22.
+Gather four scalar cards into P0, labeled MPI_Gather, MPI_COMM_WORLD, root=0. Final C=[[7,10],[15,22]], colors matching the four processes. rank=i*n+j; C[i][j]=sum A[i][k]*B[k][j], k=0..n-1. Worked example P2: 3*1+4*3=15. No new communicators.
+
+Correction prompt:
+Correct replicated ownership in the input matrices: A top cells each show P0/P1 blue/green; bottom each P2/P3 orange/purple. B left cells each show P0/P2 blue/orange; right each P1/P3 green/purple. Keep values visible. Correct column type to MPI_Type_vector(n,1,n,MPI_DOUBLE). Preserve all other content.
