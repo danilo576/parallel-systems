@@ -1,0 +1,24 @@
+Use case: scientific-educational. Create a high resolution landscape Serbian Latin MPI study sheet titled "Mnozenje matrice i vektora — 02.07.2021." Use attached reference ONLY for style: cream paper, pastel panels, clear black typography and colored ownership. All data below overrides reference. N=8, p=16, q=4, s=2. Three separated panels: data distribution, communication, result. Each of P0..P15 has a distinct pastel color used consistently in matrix and process grids.
+Actual A is 8x8, global row and column indices 0..7, label EVERY cell with owner. Exact owner rows:
+P0 P0 P1 P1 P2 P2 P3 P3
+P4 P4 P5 P5 P6 P6 P7 P7
+P8 P8 P9 P9 P10 P10 P11 P11
+P12 P12 P13 P13 P14 P14 P15 P15
+P0 P0 P1 P1 P2 P2 P3 P3
+P4 P4 P5 P5 P6 P6 P7 P7
+P8 P8 P9 P9 P10 P10 P11 P11
+P12 P12 P13 P13 P14 P14 P15 P15.
+Beside A draw b[0]..b[7] with groups {0,1}, {2,3}, {4,5}, {6,7}, indicate each group belongs to process column 0,1,2,3 respectively. Ownership formula "P(4r+t): vrste r, r+4; kolone 2t, 2t+1".
+Below show initial matrix distribution labels: "a) MPI_Send: count=1, vector(s,s,q*N), P0 -> ostali"; "b) MPI_Scatter: MPI_COMM_WORLD, root=0; extent=s*sizeof(double)".
+Middle separate 4x4 process grid row-major P0..P15. Top row P0..P3 holds local_b [1,2], [3,4], [5,6], [7,8]. Arrows P0 to other top-row nodes label "Scatter: row_comm, root=0, samo row==0". Vertical downward arrows in each column label "Bcast: col_comm, root=0". Distinct node colors same as A.
+Right separate row-major process grid. Horizontal converging logical arrows per row toward final-column nodes P3,P7,P11,P15 label "Reduce MPI_SUM: row_comm, root=3". Those nodes hold respectively [204,1356], [492,1644], [780,1932], [1068,1700]. Then arrows from P3,P7,P11 into P15 label "Gather: col_comm, root=3, samo col==3". Explicit global output index groups respectively {0,4}, {1,5}, {2,6}, {3,7}. Note "MINLOC: Reduce + Bcast, MPI_COMM_WORLD, root=0" and "a[7][7]=-1 -> P15". Final output "c=[204,492,780,1068,1356,1644,1932,1700]".
+Bottom worked example P1: "local_a=[[3,4],[35,36]], local_b=[3,4], local_c=[25,249]". Sum "P0 [5,101] + P1 [25,249] + P2 [61,413] + P3 [113,593] = [204,1356]". Caption "Doprinosi za c[0] i c[4]; Gather vraca ciklicne indekse." Clean readable short labels, correct ranks and arrows, no full source code.
+
+
+Correction prompt:
+Edit the supplied study sheet. Preserve all layout, all numbers, all matrix ownership and process colors, all formulas and output. Correct ONLY the vector b coloring and orange Scatter arrows. Vector b must be colored in CONTIGUOUS PAIRS matching legend groups: b[0] and b[1] blue, b[2] and b[3] green, b[4] and b[5] orange, b[6] and b[7] purple. Current alternating colors are incorrect. Orange Scatter arrows must originate at P0 and point to P1, P2, P3 only; remove any arrowhead pointing into P0. Leave every other element unchanged.
+Correction for part b distribution:
+undefined
+Final correction to revised sketch:
+undefined
+
