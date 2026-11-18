@@ -1,0 +1,11 @@
+Use case: scientific-educational. Create a landscape MPI classroom worksheet image on warm white paper, clean thin-lined matrix grids, pastel cell fills and large clear typeset text. Title exactly "Raspodela kvadranata (n = 4)". Left panel "A na P0" with one 4-by-4 matrix containing these exact rows:
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+Tint the 2-by-2 quadrants distinctly: upper left light gray (stays at P0), upper right pastel blue (P1), lower left pastel green (P2), lower right pastel orange (P3). Middle panel "MPI_COMM_WORLD" with three separate arrows originating at node P0 and directed to P1 (blue), P2 (green), P3 (orange). Put "1 poruka po procesu" underneath. Right panel "C na P1" with a different 4-by-4 matrix containing exactly these four rows:
+0 0 0 3
+0 0 4 7
+0 8 3 4
+7 8 0 0
+In the right panel color nonzero cells the same pastel blue and zero cells white. Small footer under right matrix "3, 4, 7, 8 → 3, 4, 7, 8". Use visible grid lines to make row boundaries and matrices clear. Keep the given cells and arrow directions exact. No extra text, graphics, or repeated matrices.
