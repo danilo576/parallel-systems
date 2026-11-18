@@ -1,0 +1,3 @@
+Referentna slika: matrix_product_contrast_sketch.png
+
+Edit only the bottom-center b) panel of the supplied exact worksheet. Keep all other text, arrows, numbers, matrices, colors and layout exactly the same. Replace the green panel text with three legible lines “b) Reduce · MPI_SUM”, “MPI_COMM_WORLD, root = 0”, “P1, P2, P3 → P0”. Replace the yellow caption beneath this panel with “Svaki proces: svoj blok + nule”. Keep the left a) Gather panel intact and keep all 16 cells of the final C matrix intact. Exact typography, strong contrast.
