@@ -22,9 +22,18 @@ int main(int argc, char **argv)
 
     int row = rank / q;
     int col = rank % q;
-    int color = row >= col ? 0 : 1;
+    int lower_ranks[size];
+    int lower_count = 0;
+    for (int i = 0; i < q; i++)
+        for (int j = 0; j < q; j++)
+            if (i >= j)
+                lower_ranks[lower_count++] = i * q + j;
+
+    MPI_Group world_group, lower_group;
     MPI_Comm lower_comm;
-    MPI_Comm_split(MCW, color, rank, &lower_comm);
+    MPI_Comm_group(MCW, &world_group);
+    MPI_Group_incl(world_group, lower_count, lower_ranks, &lower_group);
+    MPI_Comm_create(MCW, lower_group, &lower_comm);
 
     if (row >= col) {
         int a[q][q];
