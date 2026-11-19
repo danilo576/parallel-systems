@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="464" viewBox="0 0 940 464" role="img" aria-labelledby="title desc">
+<title id="title">Slanje podatka u stablu za osam MPI procesa</title>
+<desc id="desc">P0 šalje 42 procesu P1. Zatim P0 i P1 šalju procesima P2 i P3. Na kraju P0, P1, P2 i P3 šalju procesima P4, P5, P6 i P7.</desc>
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#15635d"/></marker>
+</defs>
+<style>
+text { font-family: Arial, sans-serif; fill: #243b42; font-size: 15px }
+.heading { font-size: 26px; font-weight: bold }
+.level { font-weight: bold }
+.send { stroke: #15635d; stroke-width: 2; marker-end: url(#arrow) }
+.keep { stroke: #778890; stroke-width: 2; stroke-dasharray: 5 4 }
+</style>
+<rect width="940" height="464" rx="18" fill="#fbf8ef"/>
+<text x="26" y="43" class="heading">Slanje podatka u stablu · 8 procesa</text>
+<text x="26" y="73">MCW · oznaka poruke 0 · početna vrednost 42</text>
+<text x="26" y="137" class="level">Početak</text>
+<path d="M529 150 L337 202" class="keep"/>
+<path d="M529 150 L721 202" class="send"/>
+<text x="26" y="227" class="level">Nivo 1 · +1</text>
+<path d="M337 240 L241 292" class="keep"/>
+<path d="M337 240 L433 292" class="send"/>
+<path d="M721 240 L625 292" class="keep"/>
+<path d="M721 240 L817 292" class="send"/>
+<text x="26" y="317" class="level">Nivo 2 · +2</text>
+<path d="M241 330 L193 382" class="keep"/>
+<path d="M241 330 L289 382" class="send"/>
+<path d="M433 330 L385 382" class="keep"/>
+<path d="M433 330 L481 382" class="send"/>
+<path d="M625 330 L577 382" class="keep"/>
+<path d="M625 330 L673 382" class="send"/>
+<path d="M817 330 L769 382" class="keep"/>
+<path d="M817 330 L865 382" class="send"/>
+<text x="26" y="407" class="level">Nivo 3 · +4</text>
+<rect x="491" y="114" width="76" height="36" rx="8" fill="#c7dfec" stroke="#52717c"/><text x="529" y="137" text-anchor="middle">P0 · 42</text>
+<rect x="299" y="204" width="76" height="36" rx="8" fill="#eaf1f4" stroke="#52717c"/><text x="337" y="227" text-anchor="middle">P0 · 42</text>
+<rect x="683" y="204" width="76" height="36" rx="8" fill="#bfe4da" stroke="#52717c"/><text x="721" y="227" text-anchor="middle">P1 · 42</text>
+<rect x="203" y="294" width="76" height="36" rx="8" fill="#eaf1f4" stroke="#52717c"/><text x="241" y="317" text-anchor="middle">P0 · 42</text>
+<rect x="395" y="294" width="76" height="36" rx="8" fill="#bfe4da" stroke="#52717c"/><text x="433" y="317" text-anchor="middle">P2 · 42</text>
+<rect x="587" y="294" width="76" height="36" rx="8" fill="#eaf1f4" stroke="#52717c"/><text x="625" y="317" text-anchor="middle">P1 · 42</text>
+<rect x="779" y="294" width="76" height="36" rx="8" fill="#bfe4da" stroke="#52717c"/><text x="817" y="317" text-anchor="middle">P3 · 42</text>
+<rect x="155" y="384" width="76" height="36" rx="8" fill="#eaf1f4" stroke="#52717c"/><text x="193" y="407" text-anchor="middle">P0 · 42</text>
+<rect x="251" y="384" width="76" height="36" rx="8" fill="#bfe4da" stroke="#52717c"/><text x="289" y="407" text-anchor="middle">P4 · 42</text>
+<rect x="347" y="384" width="76" height="36" rx="8" fill="#eaf1f4" stroke="#52717c"/><text x="385" y="407" text-anchor="middle">P2 · 42</text>
+<rect x="443" y="384" width="76" height="36" rx="8" fill="#bfe4da" stroke="#52717c"/><text x="481" y="407" text-anchor="middle">P6 · 42</text>
+<rect x="539" y="384" width="76" height="36" rx="8" fill="#eaf1f4" stroke="#52717c"/><text x="577" y="407" text-anchor="middle">P1 · 42</text>
+<rect x="635" y="384" width="76" height="36" rx="8" fill="#bfe4da" stroke="#52717c"/><text x="673" y="407" text-anchor="middle">P5 · 42</text>
+<rect x="731" y="384" width="76" height="36" rx="8" fill="#eaf1f4" stroke="#52717c"/><text x="769" y="407" text-anchor="middle">P3 · 42</text>
+<rect x="827" y="384" width="76" height="36" rx="8" fill="#bfe4da" stroke="#52717c"/><text x="865" y="407" text-anchor="middle">P7 · 42</text>
+
+<path d="M26 443 h35" class="send"/><text x="70" y="448">MPI_Send → MPI_Recv</text>
+<path d="M285 443 h35" class="keep"/><text x="329" y="448">Proces zadržava podatak</text>
+</svg>
