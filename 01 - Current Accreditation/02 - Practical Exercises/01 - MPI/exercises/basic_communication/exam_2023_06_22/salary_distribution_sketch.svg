@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="390" viewBox="0 0 760 390" role="img" aria-labelledby="title">
+  <title id="title">Raspodela šest zaposlenih na tri procesa i nalaženje najmanje plate</title>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="760" height="390" rx="16" fill="#f8fafc"/>
+  <g fill="#172554" font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="380" y="34" font-size="20" font-weight="bold">P0 unosi 6 zaposlenih</text>
+    <text x="380" y="58" font-size="14">Zapisi su prikazani kao parovi (ID, plata)</text>
+    <g font-size="16">
+      <rect x="40" y="72" width="200" height="36" rx="8" fill="#bfdbfe"/>
+      <rect x="280" y="72" width="200" height="36" rx="8" fill="#c4eddb"/>
+      <rect x="520" y="72" width="200" height="36" rx="8" fill="#fed7aa"/>
+      <text x="140" y="95">(1, 900)  (8, 650)</text>
+      <text x="380" y="95">(4, 500)  (7, 800)</text>
+      <text x="620" y="95">(3, 700)  (2, 500)</text>
+    </g>
+    <text x="380" y="130" font-size="14">MPI_Bcast (n), zatim MPI_Scatter (zapisi) · MCW · koren 0</text>
+    <g font-size="16">
+      <rect x="40" y="177" width="200" height="67" rx="8" fill="#bfdbfe"/>
+      <rect x="280" y="177" width="200" height="67" rx="8" fill="#c4eddb"/>
+      <rect x="520" y="177" width="200" height="67" rx="8" fill="#fed7aa"/>
+      <text x="140" y="202" font-weight="bold">P0</text>
+      <text x="380" y="202" font-weight="bold">P1</text>
+      <text x="620" y="202" font-weight="bold">P2</text>
+      <text x="140" y="226">min. plata 650</text>
+      <text x="380" y="226">min. plata 500</text>
+      <text x="620" y="226">min. plata 500</text>
+    </g>
+    <text x="380" y="309" font-size="14">MPI_Reduce · MPI_MIN za platu · MCW · koren 0</text>
+    <rect x="200" y="326" width="360" height="43" rx="8" fill="#bfdbfe"/>
+    <text x="380" y="353" font-size="17" font-weight="bold">Prvi zapis sa platom 500 ima ID 4</text>
+  </g>
+  <g fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M140 140 V170"/>
+    <path d="M380 140 V170"/>
+    <path d="M620 140 V170"/>
+    <path d="M140 250 L334 289"/>
+    <path d="M380 250 V289"/>
+    <path d="M620 250 L426 289"/>
+  </g>
+</svg>
