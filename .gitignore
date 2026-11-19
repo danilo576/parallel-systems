@@ -42,3 +42,6 @@ CMakeFiles/
 # Skice uz MPI zadatke sa roka 05.12.2018.
 !/01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/logical_process_grid/exam_2018_12_05/cyclic_rows_sketch.png
 !/01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/logical_process_grid/exam_2018_12_05/column_blocks_sketch.png
+
+# Skica uz zadatak sabiranja u stablu.
+!/01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/basic_communication/tree_sum/tree_sum_sketch.svg

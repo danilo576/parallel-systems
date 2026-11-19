@@ -4,18 +4,19 @@
 #define MCW MPI_COMM_WORLD
 
 /*
- * Zadatak: Napisati MPI program koji izracunava sumu N celih brojeva
- * (N je stepen broja 2) koriscenjem point-to-point komunikacije.
- * U prvom koraku procesi se grupisu u parove (P0, P1), (P2, P3), ...
- * Parcijalne sume akumuliraju se u procesima P0, P2, P4, ...
- * U sledecem koraku parovi su (P0, P2), (P4, P6), ...
- * Postupak se ponavlja dok se konacna suma ne akumulira u procesu P0.
- * Kao na slici, koristi se N procesa i sabiraju brojevi od 0 do N - 1.
+ * 04.07.2015, zadatak 4(a).
+ * Napisati MPI program koji komunikacijom od tačke do tačke sabira n brojeva
+ * (n je stepen dvojke) koristeći p = n procesa. Za p = 16 komunikacija se
+ * odvija kao na slici. U prvom koraku parovi su (P0, P1), (P2, P3), ...,
+ * (P[p-2], P[p-1]), a parcijalne sume se akumuliraju u P0, P2, ..., P[p-2].
+ * U drugom koraku parovi su (P0, P2), (P4, P6), ..., (P[p-4], P[p-2]),
+ * a parcijalne sume se akumuliraju u P0, P4, ..., P[p-4]. Postupak se
+ * ponavlja dok se konačna suma ne akumulira u P0, koji je prikazuje.
  */
 int main(int argc, char *argv[])
 {
-    int rank, size, value, sum, step;
-    MPI_Status status;
+    int rank, size, step;
+    long long value, sum;
 
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MCW, &rank);
@@ -31,9 +32,9 @@ int main(int argc, char *argv[])
     if ((size & (size - 1)) != 0)
     {
         if (rank == 0)
-            printf("The number of processes must be a power of two.\n");
+            fprintf(stderr, "The number of processes must be a power of two.\n");
         MPI_Finalize();
-        return 0;
+        return 1;
     }
 
     sum = rank;
@@ -42,18 +43,18 @@ int main(int argc, char *argv[])
     {
         if (rank % (2 * step) == 0)
         {
-            MPI_Recv(&value, 1, MPI_INT, rank + step, 0, MCW, &status);
+            MPI_Recv(&value, 1, MPI_LONG_LONG_INT, rank + step, 0, MCW, MPI_STATUS_IGNORE);
             sum += value;
         }
         else
         {
-            MPI_Send(&sum, 1, MPI_INT, rank - step, 0, MCW);
+            MPI_Send(&sum, 1, MPI_LONG_LONG_INT, rank - step, 0, MCW);
             break;
         }
     }
 
     if (rank == 0)
-        printf("Final sum is: %d\n", sum);
+        printf("Final sum is: %lld\n", sum);
 
     MPI_Finalize();
     return 0;

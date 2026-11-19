@@ -7,7 +7,7 @@
 | [exercises/basic_communication/hello](exercises/basic_communication/hello) | Osnovni MPI program |
 | [exercises/basic_communication/chain](exercises/basic_communication/chain) | Lančana komunikacija |
 | [exercises/basic_communication/sum](exercises/basic_communication/sum) | Sabiranje |
-| [exercises/basic_communication/tree_sum](exercises/basic_communication/tree_sum) | Sabiranje u strukturi stabla |
+| [exercises/basic_communication/tree_sum](exercises/basic_communication/tree_sum) | Sabiranje u strukturi stabla — 04.07.2015, zadatak 4(a). |
 | [exercises/basic_communication/exam_2019_06_12](exercises/basic_communication/exam_2019_06_12) | Prosleđivanje niza zaposlenih — 12.06.2019, zadatak 4(a). |
 | [exercises/matrix_matrix_products/matrix_product](exercises/matrix_matrix_products/matrix_product) | Množenje sa delimičnim doprinosima rezultatu |
 | [exercises/matrix_matrix_products/cyclic_matrix_product](exercises/matrix_matrix_products/cyclic_matrix_product) | Ciklična raspodela kolona, kod i skica |
