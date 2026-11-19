@@ -73,3 +73,25 @@ Prevođenje sa `-std=c99 -Wall -Wextra -pedantic` prolazi bez upozorenja. MPI re
 - `../exam_2022_06_23/mpi_block_matrix_product.c`: množenje matrica i direktno slanje izvedenim tipom. Ovde je raspodela drugačija i nisu dozvoljeni novi komunikatori.
 - `../exam_2021_10_07/mpi_cyclic_rows_matrix_vector.c`: stil rešenja i izvedeni tip `MPI_Type_vector`.
 - Provereni su i dopunski materijali u `01 - Current Accreditation/04 - Additional Materials/Paralelni sistemi`; uslovi konkretnog zadatka sa slike određuju ovo rešenje.
+
+## Zadatak B — Raspodela zaposlenih u donjem trouglu
+
+[Rešenje u C-u](mpi_lower_triangle_employees.c)
+
+1. Procesi čine kvadratnu mrežu `q × q`. Proces na mestu `(i, j)` ima globalni rang `i*q + j`. U grupu upisujemo samo polja za koja važi `i > j`. Za devet procesa to su P3, P6 i P7, tim redom.
+2. `MPI_Group_incl` formira grupu od izabranih rangova, a svi procesi pozivaju `MPI_Comm_create` u `MCW`. Dalje učestvuju samo članovi grupe. Prvi član ima lokalni rang 0 u `lower_comm` i inicijalizuje niz.
+3. `MPI_Type_create_struct` opisuje matični broj, ime, prezime i prosečnu platu pomoću pomeraja dobijenih sa `offsetof`. Extent postavljamo na `sizeof(Employee)` da uzastopni zapisi u MPI tipu odgovaraju uzastopnim elementima C niza.
+4. U primeru niz sadrži šest zapisa. Jedan poziv `MPI_Bcast` u `lower_comm` sa lokalnim korenom 0 prenosi svih šest zapisa svakom članu. U mreži 3 × 3, P3, P6 i P7 imaju isti niz zapisa 1001–1006.
+
+![Donji trougao mreže i raspodela zapisa zaposlenih](employee_distribution_sketch.png)
+
+[Prompt za skicu](employee_distribution_sketch_prompt.txt)
+
+```sh
+mpicc -std=c99 -Wall -Wextra -pedantic mpi_lower_triangle_employees.c -o /tmp/mpi_lower_triangle_employees -lm
+mpirun --oversubscribe -np 9 /tmp/mpi_lower_triangle_employees
+```
+
+Svaki od procesa P3, P6 i P7 ispisuje svih šest zapisa, od 1001 do 1006. Redosled ispisa između procesa može da se razlikuje.
+
+Provereno sa 4, 9 i 16 procesa. Za izbor grupe korišćen je primer od 14.11.2025, a za opis strukture i raspodelu primer `Priprema/MPI/jun-2023/Source.c` iz dopunskih materijala.
