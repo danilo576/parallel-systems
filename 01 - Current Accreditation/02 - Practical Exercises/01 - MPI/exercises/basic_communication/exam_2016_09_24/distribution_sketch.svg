@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="890" height="390" viewBox="0 0 890 390" role="img" aria-labelledby="title">
+<title id="title">Raspodela parnih kolona iz matrice A na P0 u gornji trougao matrice C kod svakog primaoca</title>
+<rect width="890" height="390" rx="14" fill="#faf7ef"/>
+<g font-family="sans-serif" text-anchor="middle" fill="#203344">
+<text x="166" y="42" font-size="22" font-weight="bold">P0 · matrica A</text>
+<text x="724" y="42" font-size="22" font-weight="bold">Svaki Pᵢ · matrica C</text>
+<g transform="translate(34 69)" font-size="18">
+<rect x="0" y="0" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="22" y="27">a₀₀</text>
+<rect x="44" y="0" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="27">a₀₁</text>
+<rect x="88" y="0" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="110" y="27">a₀₂</text>
+<rect x="132" y="0" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="154" y="27">a₀₃</text>
+<rect x="176" y="0" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="198" y="27">a₀₄</text>
+<rect x="220" y="0" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="242" y="27">a₀₅</text>
+<rect x="0" y="42" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="22" y="69">a₁₀</text>
+<rect x="44" y="42" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="69">a₁₁</text>
+<rect x="88" y="42" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="110" y="69">a₁₂</text>
+<rect x="132" y="42" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="154" y="69">a₁₃</text>
+<rect x="176" y="42" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="198" y="69">a₁₄</text>
+<rect x="220" y="42" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="242" y="69">a₁₅</text>
+<rect x="0" y="84" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="22" y="111">a₂₀</text>
+<rect x="44" y="84" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="111">a₂₁</text>
+<rect x="88" y="84" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="110" y="111">a₂₂</text>
+<rect x="132" y="84" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="154" y="111">a₂₃</text>
+<rect x="176" y="84" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="198" y="111">a₂₄</text>
+<rect x="220" y="84" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="242" y="111">a₂₅</text>
+<rect x="0" y="126" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="22" y="153">a₃₀</text>
+<rect x="44" y="126" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="153">a₃₁</text>
+<rect x="88" y="126" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="110" y="153">a₃₂</text>
+<rect x="132" y="126" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="154" y="153">a₃₃</text>
+<rect x="176" y="126" width="44" height="42" fill="#cddcf6" stroke="#718783"/>
+<text x="198" y="153">a₃₄</text>
+<rect x="220" y="126" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="242" y="153">a₃₅</text>
+<rect x="0" y="168" width="44" height="42" fill="#cddcf6" stroke="#718783"/>
+<text x="22" y="195">a₄₀</text>
+<rect x="44" y="168" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="195">a₄₁</text>
+<rect x="88" y="168" width="44" height="42" fill="#cddcf6" stroke="#718783"/>
+<text x="110" y="195">a₄₂</text>
+<rect x="132" y="168" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="154" y="195">a₄₃</text>
+<rect x="176" y="168" width="44" height="42" fill="#cddcf6" stroke="#718783"/>
+<text x="198" y="195">a₄₄</text>
+<rect x="220" y="168" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="242" y="195">a₄₅</text>
+<rect x="0" y="210" width="44" height="42" fill="#e8d2ef" stroke="#718783"/>
+<text x="22" y="237">a₅₀</text>
+<rect x="44" y="210" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="237">a₅₁</text>
+<rect x="88" y="210" width="44" height="42" fill="#e8d2ef" stroke="#718783"/>
+<text x="110" y="237">a₅₂</text>
+<rect x="132" y="210" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="154" y="237">a₅₃</text>
+<rect x="176" y="210" width="44" height="42" fill="#e8d2ef" stroke="#718783"/>
+<text x="198" y="237">a₅₄</text>
+<rect x="220" y="210" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="242" y="237">a₅₅</text>
+</g>
+<g transform="translate(592 69)" font-size="18">
+<rect x="0" y="0" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="22" y="27">0</text>
+<rect x="44" y="0" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="27">0</text>
+<rect x="88" y="0" width="44" height="42" fill="#e8d2ef" stroke="#718783"/>
+<text x="110" y="27">a₅₀</text>
+<rect x="132" y="0" width="44" height="42" fill="#cddcf6" stroke="#718783"/>
+<text x="154" y="27">a₃₄</text>
+<rect x="176" y="0" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="198" y="27">a₂₀</text>
+<rect x="220" y="0" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="242" y="27">a₀₀</text>
+<rect x="0" y="42" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="22" y="69">0</text>
+<rect x="44" y="42" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="69">0</text>
+<rect x="88" y="42" width="44" height="42" fill="#e8d2ef" stroke="#718783"/>
+<text x="110" y="69">a₅₂</text>
+<rect x="132" y="42" width="44" height="42" fill="#cddcf6" stroke="#718783"/>
+<text x="154" y="69">a₄₀</text>
+<rect x="176" y="42" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="198" y="69">a₂₂</text>
+<rect x="220" y="42" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="242" y="69">a₀₂</text>
+<rect x="0" y="84" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="22" y="111">0</text>
+<rect x="44" y="84" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="111">0</text>
+<rect x="88" y="84" width="44" height="42" fill="#e8d2ef" stroke="#718783"/>
+<text x="110" y="111">a₅₄</text>
+<rect x="132" y="84" width="44" height="42" fill="#cddcf6" stroke="#718783"/>
+<text x="154" y="111">a₄₂</text>
+<rect x="176" y="84" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="198" y="111">a₂₄</text>
+<rect x="220" y="84" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="242" y="111">a₀₄</text>
+<rect x="0" y="126" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="22" y="153">0</text>
+<rect x="44" y="126" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="153">0</text>
+<rect x="88" y="126" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="110" y="153">0</text>
+<rect x="132" y="126" width="44" height="42" fill="#cddcf6" stroke="#718783"/>
+<text x="154" y="153">a₄₄</text>
+<rect x="176" y="126" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="198" y="153">a₃₀</text>
+<rect x="220" y="126" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="242" y="153">a₁₀</text>
+<rect x="0" y="168" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="22" y="195">0</text>
+<rect x="44" y="168" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="195">0</text>
+<rect x="88" y="168" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="110" y="195">0</text>
+<rect x="132" y="168" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="154" y="195">0</text>
+<rect x="176" y="168" width="44" height="42" fill="#f7e0a9" stroke="#718783"/>
+<text x="198" y="195">a₃₂</text>
+<rect x="220" y="168" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="242" y="195">a₁₂</text>
+<rect x="0" y="210" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="22" y="237">0</text>
+<rect x="44" y="210" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="66" y="237">0</text>
+<rect x="88" y="210" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="110" y="237">0</text>
+<rect x="132" y="210" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="154" y="237">0</text>
+<rect x="176" y="210" width="44" height="42" fill="#eeeae1" stroke="#718783"/>
+<text x="198" y="237">0</text>
+<rect x="220" y="210" width="44" height="42" fill="#bee3d2" stroke="#718783"/>
+<text x="242" y="237">a₁₄</text>
+</g>
+<text x="445" y="151" font-size="17" font-weight="bold">MPI_Send → MPI_Recv</text>
+<path d="M320 174H570M559 165L570 174L559 183" fill="none" stroke="#203344" stroke-width="2.5"/>
+<text x="445" y="204" font-size="15">Jedna poruka za svaki i &gt; 0</text>
+<text x="445" y="226" font-size="15">MCW</text>
+<text x="166" y="348" font-size="16">Parne kolone, čitanje po vrstama</text>
+<text x="724" y="348" font-size="16">Upis zdesna nalevo, do dijagonale</text>
+<text x="445" y="374" font-size="15">Ista boja označava elemente iste odredišne kolone.</text>
+</g>
+</svg>
