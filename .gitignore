@@ -64,3 +64,7 @@ CMakeFiles/
 
 # Skica uz I kolokvijum iz MPI-ja od 15.05.2015.
 !/01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/basic_communication/colloquium_2015_05_15/tree_broadcast_sketch.svg
+
+# Skice uz MPI zadatak sa roka 23.10.2022.
+!/01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/logical_process_grid/exam_2022_10_23/matrix_product_sketch.png
+!/01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/logical_process_grid/exam_2022_10_23/student_broadcast_sketch.png
