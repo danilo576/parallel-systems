@@ -12,6 +12,8 @@
 - Ne koristi `MPI_Type_create_hvector` u rešenjima zadataka. Koristi `MPI_Type_vector` uz `MPI_Type_create_resized` kada je potrebno prilagoditi extent.
 - Ne koristi `MPI_Type_free` u rešenjima zadataka.
 - Ne koristi `MPI_Comm_free` u rešenjima zadataka.
+- Ne koristi `MPI_Group_free` u rešenjima zadataka.
+- Ne koristi `MPI_COMM_NULL` u rešenjima zadataka.
 - Ne koristi `MPI_File_set_errhandler` u rešenjima zadataka.
 - Ne koristi `MPI_SUCCESS` u rešenjima zadataka.
 - Ne koristi `MPI_UNDEFINED` u rešenjima zadataka.
