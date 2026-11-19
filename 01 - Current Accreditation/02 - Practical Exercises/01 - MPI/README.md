@@ -18,6 +18,7 @@
 | [exercises/virtual_topologies/exam_2020_07_03](exercises/virtual_topologies/exam_2020_07_03) | Virtuelne topologije, ciklični pomak po vrstama — 03.07.2020, zadatak 4(a). |
 | [exercises/virtual_topologies/exam_2023_04_25](exercises/virtual_topologies/exam_2023_04_25) | Virtuelne topologije, razmena unutar vrste između kolona iste parnosti — 25.04.2023. |
 | [exercises/parallel_io/exam_2022_01_28](exercises/parallel_io/exam_2022_01_28) | MPI-IO, zajedničko čitanje i kolektivni upis — 28.01.2022. |
+| [exercises/parallel_io/exam_2022_12_05](exercises/parallel_io/exam_2022_12_05) | MPI-IO, upis blokova rastuće dužine — 05.12.2022. |
 
 ## Zajednički fajlovi
 
