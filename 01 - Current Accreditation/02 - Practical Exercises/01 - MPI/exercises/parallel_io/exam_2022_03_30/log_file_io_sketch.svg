@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="490" viewBox="0 0 960 490" role="img" aria-labelledby="title desc">
+  <title id="title">Raspored binarnih log podataka za tri procesa</title>
+  <desc id="desc">P0 čita bajtove 0–19, P1 bajtove 20–39, P2 bajtove 40–59. Prvi izlaz sadrži cele blokove proizvoljnim redom. U drugom izlazu svaki krug sadrži po dva bajta iz P2, P1 i P0.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#526176"/>
+    </marker>
+    <style>
+      text { font-family: system-ui, sans-serif; fill: #172a43; }
+      .heading { font-size: 22px; font-weight: 700; }
+      .label { font-size: 16px; }
+      .detail { font-size: 14px; fill: #465672; }
+      .cell { font-size: 16px; font-weight: 600; text-anchor: middle; }
+      .p0 { fill: #c9e1fa; stroke: #7099c4; }
+      .p1 { fill: #ccebd8; stroke: #76a88a; }
+      .p2 { fill: #f7dfb9; stroke: #bb9254; }
+    </style>
+  </defs>
+  <rect width="960" height="490" rx="16" fill="#faf8f3"/>
+  <path d="M34 204H926M34 321H926" stroke="#ddd8cd"/>
+  <text class="heading" x="34" y="42">1. Kolektivno čitanje iz file1.dat</text>
+  <text class="detail" x="34" y="67">MPI_File_read_at_all · MCW · 20 bajtova po procesu</text>
+  <g>
+    <rect class="p0" x="34" y="83" width="180" height="36" rx="6"/>
+    <rect class="p1" x="214" y="83" width="180" height="36" rx="6"/>
+    <rect class="p2" x="394" y="83" width="180" height="36" rx="6"/>
+    <text class="cell" x="124" y="106">0–19</text>
+    <text class="cell" x="304" y="106">20–39</text>
+    <text class="cell" x="484" y="106">40–59</text>
+    <path d="M124 121v24M304 121v24M484 121v24" stroke="#526176" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <rect class="p0" x="89" y="151" width="70" height="32" rx="6"/>
+    <rect class="p1" x="269" y="151" width="70" height="32" rx="6"/>
+    <rect class="p2" x="449" y="151" width="70" height="32" rx="6"/>
+    <text class="cell" x="124" y="173">P0</text>
+    <text class="cell" x="304" y="173">P1</text>
+    <text class="cell" x="484" y="173">P2</text>
+    <text class="label" x="601" y="106">Bajtovi u ulaznoj datoteci</text>
+    <text class="label" x="601" y="173">Lokalni baferi procesa</text>
+  </g>
+  <text class="heading" x="34" y="237">2. Upis celih blokova u file2.dat</text>
+  <text class="detail" x="34" y="261">MPI_File_write_shared · MCW</text>
+  <rect class="p1" x="34" y="273" width="180" height="33" rx="6"/>
+  <rect class="p0" x="214" y="273" width="180" height="33" rx="6"/>
+  <rect class="p2" x="394" y="273" width="180" height="33" rx="6"/>
+  <text class="cell" x="124" y="295">P1 · 20–39</text>
+  <text class="cell" x="304" y="295">P0 · 0–19</text>
+  <text class="cell" x="484" y="295">P2 · 40–59</text>
+  <text class="label" x="601" y="295">Jedan mogući redosled</text>
+
+  <text class="heading" x="34" y="354">3. Upis desetina u file3.dat</text>
+  <text class="detail" x="34" y="378">MPI_File_write_ordered · reverse_comm · rangovi P2 = 0, P1 = 1, P0 = 2</text>
+  <g>
+    <text class="detail" x="34" y="407">Krug 1</text>
+    <text class="detail" x="310" y="407">Krug 2</text>
+    <text class="detail" x="654" y="407">Krug 10</text>
+    <rect class="p2" x="34" y="416" width="88" height="40" rx="6"/>
+    <rect class="p1" x="122" y="416" width="88" height="40" rx="6"/>
+    <rect class="p0" x="210" y="416" width="88" height="40" rx="6"/>
+    <rect class="p2" x="310" y="416" width="88" height="40" rx="6"/>
+    <rect class="p1" x="398" y="416" width="88" height="40" rx="6"/>
+    <rect class="p0" x="486" y="416" width="88" height="40" rx="6"/>
+    <rect class="p2" x="654" y="416" width="88" height="40" rx="6"/>
+    <rect class="p1" x="742" y="416" width="88" height="40" rx="6"/>
+    <rect class="p0" x="830" y="416" width="88" height="40" rx="6"/>
+    <text class="cell" x="78" y="442">40 41</text>
+    <text class="cell" x="166" y="442">20 21</text>
+    <text class="cell" x="254" y="442">0 1</text>
+    <text class="cell" x="354" y="442">42 43</text>
+    <text class="cell" x="442" y="442">22 23</text>
+    <text class="cell" x="530" y="442">2 3</text>
+    <text class="cell" x="614" y="442">…</text>
+    <text class="cell" x="698" y="442">58 59</text>
+    <text class="cell" x="786" y="442">38 39</text>
+    <text class="cell" x="874" y="442">18 19</text>
+  </g>
+</svg>
