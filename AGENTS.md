@@ -10,6 +10,7 @@
 - Biraj što jednostavnije rešenje koje ispunjava zadatak. Ne dodaj nepotrebnu sinhronizaciju, dodatne potvrde prijema ili složeno formatiranje izlaza.
 - Za unos pomoću `scanf` pretpostavi ispravan ulaz. Ne proveravaj povratnu vrednost funkcije i ne dodaj validaciju unosa, osim ako je zadatak izričito traži. Zadrži provere uslova od kojih zavisi algoritam.
 - Pri dinamičkoj alokaciji memorije pretpostavi da alokacija uspeva. Ne proveravaj da li su `malloc`, `calloc` ili slične funkcije vratile `NULL`, osim ako zadatak izričito traži obradu greške.
+- Pri otvaranju datoteka pretpostavi da otvaranje uspeva. Ne proveravaj povratnu vrednost funkcija kao što su `MPI_File_open` i `fopen`, osim ako zadatak izričito traži obradu greške.
 
 - Ne koristi `MPI_Type_create_hvector` u rešenjima zadataka. Koristi `MPI_Type_vector` uz `MPI_Type_create_resized` kada je potrebno prilagoditi extent.
 - Ne koristi `MPI_Type_free` u rešenjima zadataka.

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340" role="img" aria-labelledby="title">
+  <title id="title">Raspored upisa i čitanja datoteka za P0, P1 i P2</title>
+  <rect width="960" height="340" rx="12" fill="#faf8f3"/>
+  <g font-family="system-ui, sans-serif" fill="#23354a">
+    <text x="28" y="36" font-size="22" font-weight="bold">MPI-IO · 105 brojeva po procesu</text>
+    <text x="28" y="71" font-size="15">1. file1.dat · MPI_File_seek + MPI_File_write_all</text>
+    <rect x="28" y="81" width="290" height="38" rx="4" fill="#ffe2c4"/>
+    <rect x="322" y="81" width="290" height="38" rx="4" fill="#dcefdc"/>
+    <rect x="616" y="81" width="290" height="38" rx="4" fill="#d8e9ff"/>
+    <g text-anchor="middle" font-size="14">
+      <text x="173" y="105">P2 · vrednosti 210–314</text>
+      <text x="467" y="105">P1 · vrednosti 105–209</text>
+      <text x="761" y="105">P0 · vrednosti 0–104</text>
+    </g>
+    <text x="28" y="154" font-size="15">↓  2. MPI_File_read_at_all · svaki proces čita i proverava svoj blok</text>
+    <text x="28" y="196" font-size="15">↓  3. file2.dat · MPI_Type_indexed → MPI_File_set_view → MPI_File_write_all</text>
+    <g font-size="13" text-anchor="middle">
+      <rect x="28" y="215" width="54" height="36" rx="4" fill="#d8e9ff"/><text x="55" y="237">0</text>
+      <rect x="84" y="215" width="54" height="36" rx="4" fill="#dcefdc"/><text x="111" y="237">105</text>
+      <rect x="140" y="215" width="54" height="36" rx="4" fill="#ffe2c4"/><text x="167" y="237">210</text>
+      <rect x="210" y="215" width="75" height="36" rx="4" fill="#d8e9ff"/><text x="248" y="237">1  2</text>
+      <rect x="287" y="215" width="75" height="36" rx="4" fill="#dcefdc"/><text x="325" y="237">106  107</text>
+      <rect x="364" y="215" width="75" height="36" rx="4" fill="#ffe2c4"/><text x="402" y="237">211  212</text>
+      <rect x="455" y="215" width="96" height="36" rx="4" fill="#d8e9ff"/><text x="503" y="237">3  4  5</text>
+      <rect x="553" y="215" width="96" height="36" rx="4" fill="#dcefdc"/><text x="601" y="237">108  109  110</text>
+      <rect x="651" y="215" width="96" height="36" rx="4" fill="#ffe2c4"/><text x="699" y="237">213  214  215</text>
+      <text x="780" y="237">…</text>
+      <text x="111" y="273">k = 1</text><text x="325" y="273">k = 2</text><text x="601" y="273">k = 3</text>
+    </g>
+    <text x="28" y="312" font-size="14">U svakoj grupi redosled je P0, P1, P2. Poslednja grupa ima k = 14.</text>
+  </g>
+</svg>
