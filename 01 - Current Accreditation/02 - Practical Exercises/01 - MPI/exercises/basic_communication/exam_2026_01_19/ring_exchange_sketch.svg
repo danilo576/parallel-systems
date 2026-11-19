@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="350" viewBox="0 0 680 350" role="img" aria-labelledby="title description">
+  <title id="title">Razmena podataka u prstenu</title>
+  <desc id="description">P0 šalje 0, 6 procesu P1. P1 šalje 2, 4 procesu P2. P2 šalje 9, 3 procesu P3. P3 šalje 5, 7 procesu P0. Svaki proces prima u b2.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="680" height="350" rx="16" fill="#f8fafc"/>
+  <g text-anchor="middle" font-family="system-ui, sans-serif" fill="#172554">
+    <text x="340" y="36" font-size="21" font-weight="700">Razmena podataka u prstenu</text>
+    <text x="340" y="61" font-size="14">MPI_Send iz b1 → MPI_Recv u b2 · MCW · oznaka 0</text>
+    <rect x="55" y="85" width="140" height="90" rx="10" fill="#dbeafe"/>
+    <rect x="485" y="85" width="140" height="90" rx="10" fill="#dcfce7"/>
+    <rect x="485" y="235" width="140" height="90" rx="10" fill="#ffedd5"/>
+    <rect x="55" y="235" width="140" height="90" rx="10" fill="#ede9fe"/>
+    <g font-size="16">
+      <text x="125" y="110" font-weight="700">P0</text>
+      <text x="125" y="135">b1 = [0, 6]</text>
+      <text x="125" y="157">b2 = [5, 7]</text>
+      <text x="555" y="110" font-weight="700">P1</text>
+      <text x="555" y="135">b1 = [2, 4]</text>
+      <text x="555" y="157">b2 = [0, 6]</text>
+      <text x="555" y="260" font-weight="700">P2</text>
+      <text x="555" y="285">b1 = [9, 3]</text>
+      <text x="555" y="307">b2 = [2, 4]</text>
+      <text x="125" y="260" font-weight="700">P3</text>
+      <text x="125" y="285">b1 = [5, 7]</text>
+      <text x="125" y="307">b2 = [9, 3]</text>
+      <text x="340" y="119">[0, 6]</text>
+      <text x="605" y="210">[2, 4]</text>
+      <text x="340" y="269">[9, 3]</text>
+      <text x="175" y="210">[5, 7]</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M203 130 H477"/>
+    <path d="M555 181 V229"/>
+    <path d="M477 280 H203"/>
+    <path d="M125 229 V181"/>
+  </g>
+</svg>
