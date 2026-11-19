@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="465" viewBox="0 0 960 465" role="img" aria-labelledby="title">
+<title id="title">Kolektivno čitanje i upis blokova rastuće dužine</title>
+<rect width="960" height="465" rx="16" fill="#faf8f2"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#475569"/></marker></defs>
+<g font-family="sans-serif" fill="#172033" text-anchor="middle">
+<text x="480" y="34" font-size="20">file1.dat · četiri uzastopna bloka</text>
+<rect x="120" y="50" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="135" y="71" font-size="13">0</text>
+<rect x="150" y="50" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="165" y="71" font-size="13">1</text>
+<rect x="180" y="50" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="195" y="71" font-size="13">2</text>
+<rect x="210" y="50" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="225" y="71" font-size="13">3</text>
+<rect x="240" y="50" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="255" y="71" font-size="13">4</text>
+<rect x="270" y="50" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="285" y="71" font-size="13">5</text>
+<rect x="300" y="50" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="315" y="71" font-size="13">6</text>
+<rect x="330" y="50" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="345" y="71" font-size="13">7</text>
+<rect x="360" y="50" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="375" y="71" font-size="13">8</text>
+<rect x="390" y="50" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="405" y="71" font-size="13">9</text>
+<rect x="420" y="50" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="435" y="71" font-size="13">10</text>
+<rect x="450" y="50" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="465" y="71" font-size="13">11</text>
+<rect x="480" y="50" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="495" y="71" font-size="13">12</text>
+<rect x="510" y="50" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="525" y="71" font-size="13">13</text>
+<rect x="540" y="50" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="555" y="71" font-size="13">14</text>
+<rect x="570" y="50" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="585" y="71" font-size="13">15</text>
+<rect x="600" y="50" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="615" y="71" font-size="13">16</text>
+<rect x="630" y="50" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="645" y="71" font-size="13">17</text>
+<rect x="660" y="50" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="675" y="71" font-size="13">18</text>
+<rect x="690" y="50" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="705" y="71" font-size="13">19</text>
+<rect x="720" y="50" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="735" y="71" font-size="13">20</text>
+<rect x="750" y="50" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="765" y="71" font-size="13">21</text>
+<rect x="780" y="50" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="795" y="71" font-size="13">22</text>
+<rect x="810" y="50" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="825" y="71" font-size="13">23</text>
+<text x="210" y="101" font-size="14">P0</text>
+<text x="390" y="101" font-size="14">P1</text>
+<text x="570" y="101" font-size="14">P2</text>
+<text x="750" y="101" font-size="14">P3</text>
+<path d="M210 110L210 146" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="176" y="151" width="68" height="31" rx="6" fill="#b8d9fb"/>
+<text x="210" y="172" font-size="15">P0</text>
+<path d="M390 110L390 146" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="356" y="151" width="68" height="31" rx="6" fill="#bbebcb"/>
+<text x="390" y="172" font-size="15">P1</text>
+<path d="M570 110L570 146" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="536" y="151" width="68" height="31" rx="6" fill="#ffe0a4"/>
+<text x="570" y="172" font-size="15">P2</text>
+<path d="M750 110L750 146" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="716" y="151" width="68" height="31" rx="6" fill="#e6d2f3"/>
+<text x="750" y="172" font-size="15">P3</text>
+<text x="480" y="207" font-size="15">MPI_File_read_at_all · MCW</text>
+<path d="M480 218L480 250" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="480" y="274" font-size="18">file2.dat · sve grupe redom, unutar grupe P0 → P1 → P2 → P3</text>
+<rect x="120" y="290" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="135" y="311" font-size="13">0</text>
+<rect x="150" y="290" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="165" y="311" font-size="13">6</text>
+<rect x="180" y="290" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="195" y="311" font-size="13">12</text>
+<rect x="210" y="290" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="225" y="311" font-size="13">18</text>
+<rect x="240" y="290" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="255" y="311" font-size="13">1</text>
+<rect x="270" y="290" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="285" y="311" font-size="13">2</text>
+<rect x="300" y="290" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="315" y="311" font-size="13">7</text>
+<rect x="330" y="290" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="345" y="311" font-size="13">8</text>
+<rect x="360" y="290" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="375" y="311" font-size="13">13</text>
+<rect x="390" y="290" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="405" y="311" font-size="13">14</text>
+<rect x="420" y="290" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="435" y="311" font-size="13">19</text>
+<rect x="450" y="290" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="465" y="311" font-size="13">20</text>
+<rect x="480" y="290" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="495" y="311" font-size="13">3</text>
+<rect x="510" y="290" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="525" y="311" font-size="13">4</text>
+<rect x="540" y="290" width="30" height="31" fill="#b8d9fb" stroke="#778092"/>
+<text x="555" y="311" font-size="13">5</text>
+<rect x="570" y="290" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="585" y="311" font-size="13">9</text>
+<rect x="600" y="290" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="615" y="311" font-size="13">10</text>
+<rect x="630" y="290" width="30" height="31" fill="#bbebcb" stroke="#778092"/>
+<text x="645" y="311" font-size="13">11</text>
+<rect x="660" y="290" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="675" y="311" font-size="13">15</text>
+<rect x="690" y="290" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="705" y="311" font-size="13">16</text>
+<rect x="720" y="290" width="30" height="31" fill="#ffe0a4" stroke="#778092"/>
+<text x="735" y="311" font-size="13">17</text>
+<rect x="750" y="290" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="765" y="311" font-size="13">21</text>
+<rect x="780" y="290" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="795" y="311" font-size="13">22</text>
+<rect x="810" y="290" width="30" height="31" fill="#e6d2f3" stroke="#778092"/>
+<text x="825" y="311" font-size="13">23</text>
+<text x="180" y="341" font-size="14">po 1 broj</text>
+<text x="360" y="341" font-size="14">po 2 broja</text>
+<text x="660" y="341" font-size="14">po 3 broja</text>
+<text x="480" y="376" font-size="15">Svaka grupa · MCW</text>
+<text x="245" y="418" font-size="15">MPI_File_iwrite_at_all</text>
+<path d="M348 413L380 413" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="480" y="418" font-size="15">Simulirano računanje</text>
+<path d="M576 413L608 413" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="687" y="418" font-size="15">MPI_Wait</text>
+</g></svg>

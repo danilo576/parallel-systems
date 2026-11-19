@@ -17,6 +17,7 @@
 | [exercises/logical_process_grid](exercises/logical_process_grid) | Zadaci sa logičkom mrežom procesa — 12.06.2019, 03.07.2020, 24.04.2021, 07.10.2021, 23.06.2022. i 02.10.2023. |
 | [exercises/virtual_topologies/exam_2020_07_03](exercises/virtual_topologies/exam_2020_07_03) | Virtuelne topologije, ciklični pomak po vrstama — 03.07.2020, zadatak 4(a). |
 | [exercises/virtual_topologies/exam_2023_04_25](exercises/virtual_topologies/exam_2023_04_25) | Virtuelne topologije, razmena unutar vrste između kolona iste parnosti — 25.04.2023. |
+| [exercises/parallel_io/exam_2021_10_07](exercises/parallel_io/exam_2021_10_07) | MPI-IO, upis blokova rastuće dužine uz računanje — 07.10.2021, zadatak 3. |
 | [exercises/parallel_io/exam_2022_01_28](exercises/parallel_io/exam_2022_01_28) | MPI-IO, zajedničko čitanje i kolektivni upis — 28.01.2022. |
 | [exercises/parallel_io/exam_2022_12_05](exercises/parallel_io/exam_2022_12_05) | MPI-IO, upis blokova rastuće dužine — 05.12.2022. |
 
