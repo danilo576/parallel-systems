@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="350" viewBox="0 0 860 350" role="img">
+<title>1b · Emitovanje označenih elemenata</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#495468"/></marker></defs>
+<rect x="0" y="0" width="860" height="350" rx="0" fill="#fffaf0" stroke="none"/>
+<text x="28" y="38" text-anchor="start" font-family="system-ui,sans-serif" font-size="24" fill="#202a3a">1b · Emitovanje označenih elemenata</text>
+<text x="38" y="76" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">P0 · matrica A sa linearnim indeksima</text>
+<text x="33" y="127" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<text x="63" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<rect x="45" y="105" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="63" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<text x="99" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="81" y="105" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="99" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">1</text>
+<text x="135" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">2</text>
+<rect x="117" y="105" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="135" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">2</text>
+<text x="171" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">3</text>
+<rect x="153" y="105" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="171" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">3</text>
+<text x="207" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">4</text>
+<rect x="189" y="105" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="207" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">4</text>
+<text x="243" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">5</text>
+<rect x="225" y="105" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="243" y="127" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">5</text>
+<text x="33" y="161" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="45" y="139" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="63" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">6</text>
+<rect x="81" y="139" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="99" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">7</text>
+<rect x="117" y="139" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="135" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">8</text>
+<rect x="153" y="139" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="171" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">9</text>
+<rect x="189" y="139" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="207" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">10</text>
+<rect x="225" y="139" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="243" y="161" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">11</text>
+<text x="33" y="195" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">2</text>
+<rect x="45" y="173" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="63" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">12</text>
+<rect x="81" y="173" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="99" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">13</text>
+<rect x="117" y="173" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="135" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">14</text>
+<rect x="153" y="173" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="171" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">15</text>
+<rect x="189" y="173" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="207" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">16</text>
+<rect x="225" y="173" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="243" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">17</text>
+<text x="33" y="229" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">3</text>
+<rect x="45" y="207" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="63" y="229" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">18</text>
+<rect x="81" y="207" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="99" y="229" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">19</text>
+<rect x="117" y="207" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="135" y="229" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">20</text>
+<rect x="153" y="207" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="171" y="229" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">21</text>
+<rect x="189" y="207" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="207" y="229" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">22</text>
+<rect x="225" y="207" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="243" y="229" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">23</text>
+<text x="33" y="263" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">4</text>
+<rect x="45" y="241" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="63" y="263" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">24</text>
+<rect x="81" y="241" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="99" y="263" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">25</text>
+<rect x="117" y="241" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="135" y="263" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">26</text>
+<rect x="153" y="241" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="171" y="263" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">27</text>
+<rect x="189" y="241" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="207" y="263" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">28</text>
+<rect x="225" y="241" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="243" y="263" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">29</text>
+<text x="33" y="297" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">5</text>
+<rect x="45" y="275" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="63" y="297" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">30</text>
+<rect x="81" y="275" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="99" y="297" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">31</text>
+<rect x="117" y="275" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="135" y="297" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">32</text>
+<rect x="153" y="275" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="171" y="297" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">33</text>
+<rect x="189" y="275" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="207" y="297" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">34</text>
+<rect x="225" y="275" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="243" y="297" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">35</text>
+<text x="297" y="77" text-anchor="start" font-family="system-ui,sans-serif" font-size="17" fill="#202a3a">MPI_Bcast · recipients · koren 0</text>
+<text x="297" y="104" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#202a3a">15 označenih elemenata</text>
+<path d="M270 196 L595 153" fill="none" stroke="#495468" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="605" y="134" width="205" height="38" rx="7" fill="#ffdbb5" stroke="#495468"/>
+<text x="619" y="159" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">P1 · lokalni rang 1</text>
+<path d="M270 196 L595 209" fill="none" stroke="#495468" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="605" y="190" width="205" height="38" rx="7" fill="#c8eedc" stroke="#495468"/>
+<text x="619" y="215" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">P3 · lokalni rang 2</text>
+<path d="M270 196 L595 265" fill="none" stroke="#495468" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="605" y="246" width="205" height="38" rx="7" fill="#e6d8fb" stroke="#495468"/>
+<text x="619" y="271" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">P5 · lokalni rang 3</text>
+<text x="605" y="317" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#202a3a">P2 i P4 su van komunikatora.</text>
+</svg>

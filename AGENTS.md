@@ -12,6 +12,10 @@
 - Ne koristi `MPI_Type_create_hvector` u rešenjima zadataka. Koristi `MPI_Type_vector` uz `MPI_Type_create_resized` kada je potrebno prilagoditi extent.
 - Ne koristi `MPI_Type_free` u rešenjima zadataka.
 - Ne koristi `MPI_Comm_free` u rešenjima zadataka.
+- Ne koristi `MPI_File_set_errhandler` u rešenjima zadataka.
+- Ne koristi `MPI_SUCCESS` u rešenjima zadataka.
+- Ne koristi `MPI_UNDEFINED` u rešenjima zadataka.
+- Za `MPI_COMM_WORLD` uvek koristi makro `MCW` definisan kao `#define MCW MPI_COMM_WORLD`.
 - Ne koristi `MPI_Scatterv` u rešenjima zadataka. Za raspodelu koristi `MPI_Scatter` uz odgovarajuće izvedene tipove i komunikatore.
 - Ne koristi `MPI_Allreduce` u rešenjima zadataka. Kada rezultat redukcije treba svim procesima, koristi `MPI_Reduce` i `MPI_Bcast`.
 - Za svaki MPI zadatak generiši sliku kao skicu raspodele podataka po procesima i relevantne komunikacije. Sačuvaj sliku uz zadatak i prikaži je u njegovom `README.md` fajlu.

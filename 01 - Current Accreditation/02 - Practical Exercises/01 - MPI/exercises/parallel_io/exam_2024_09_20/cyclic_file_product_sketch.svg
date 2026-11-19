@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="480" viewBox="0 0 860 480" role="img">
+<title>1a · Ciklično čitanje i množenje matrica</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#495468"/></marker></defs>
+<rect x="0" y="0" width="860" height="480" rx="0" fill="#fffaf0" stroke="none"/>
+<text x="28" y="38" text-anchor="start" font-family="system-ui,sans-serif" font-size="24" fill="#202a3a">1a · Ciklično čitanje i množenje matrica</text>
+<text x="38" y="78" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">2009okt.dat · matrica A</text>
+<text x="33" y="130" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<text x="63" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<rect x="45" y="108" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="63" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">2</text>
+<text x="99" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="81" y="108" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="99" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">1</text>
+<text x="135" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">2</text>
+<rect x="117" y="108" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="135" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">4</text>
+<text x="171" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">3</text>
+<rect x="153" y="108" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="171" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">3</text>
+<text x="33" y="164" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="45" y="142" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="63" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">3</text>
+<rect x="81" y="142" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="99" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">4</text>
+<rect x="117" y="142" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="135" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">5</text>
+<rect x="153" y="142" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="171" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">6</text>
+<path d="M200 130 L420 108" fill="none" stroke="#495468" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M200 156 L420 215" fill="none" stroke="#495468" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="218" y="82" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#202a3a">MPI_File_read_all</text>
+<text x="218" y="103" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">MPI_COMM_WORLD</text>
+<text x="430" y="83" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">P0 · kolone 0, 2</text>
+<text x="425" y="129" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<text x="455" y="99" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<rect x="437" y="107" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="455" y="129" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">2</text>
+<text x="491" y="99" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">2</text>
+<rect x="473" y="107" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="491" y="129" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">4</text>
+<text x="425" y="163" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="437" y="141" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="455" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">3</text>
+<rect x="473" y="141" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="491" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">5</text>
+<text x="430" y="204" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">P1 · kolone 1, 3</text>
+<text x="425" y="250" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<text x="455" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="437" y="228" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="455" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">1</text>
+<text x="491" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">3</text>
+<rect x="473" y="228" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="491" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">3</text>
+<text x="425" y="284" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="437" y="262" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="455" y="284" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">4</text>
+<rect x="473" y="262" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="491" y="284" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">6</text>
+<text x="38" y="226" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">Cela matrica B na P0 i P1</text>
+<text x="33" y="275" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<text x="63" y="245" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">0</text>
+<rect x="45" y="253" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="63" y="275" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">1</text>
+<text x="99" y="245" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="81" y="253" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="99" y="275" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<text x="33" y="309" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">1</text>
+<rect x="45" y="287" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="63" y="309" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<rect x="81" y="287" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="99" y="309" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">1</text>
+<text x="33" y="343" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">2</text>
+<rect x="45" y="321" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="63" y="343" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">1</text>
+<rect x="81" y="321" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="99" y="343" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<text x="33" y="377" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#202a3a">3</text>
+<rect x="45" y="355" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="63" y="377" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<rect x="81" y="355" width="36" height="34" rx="0" fill="#fcfdff" stroke="#495468"/>
+<text x="99" y="377" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">1</text>
+<text x="38" y="415" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#202a3a">MPI_Bcast · MPI_COMM_WORLD · koren 0</text>
+<text x="550" y="83" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">Doprinos P0</text>
+<rect x="550" y="107" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="568" y="129" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">6</text>
+<rect x="586" y="107" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="604" y="129" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<rect x="550" y="141" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="568" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">8</text>
+<rect x="586" y="141" width="36" height="34" rx="0" fill="#cee5ff" stroke="#495468"/>
+<text x="604" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<text x="550" y="204" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">Doprinos P1 · minimum 1</text>
+<rect x="550" y="228" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="568" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<rect x="586" y="228" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="604" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">4</text>
+<rect x="550" y="262" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="568" y="284" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">0</text>
+<rect x="586" y="262" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="604" y="284" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">10</text>
+<path d="M627 141 L744 193" fill="none" stroke="#495468" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M627 260 L744 208" fill="none" stroke="#495468" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="747" y="162" text-anchor="start" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">C na P1</text>
+<rect x="747" y="174" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="765" y="196" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">6</text>
+<rect x="783" y="174" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="801" y="196" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">4</text>
+<rect x="747" y="208" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="765" y="230" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">8</text>
+<rect x="783" y="208" width="36" height="34" rx="0" fill="#ffdbb5" stroke="#495468"/>
+<text x="801" y="230" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#202a3a">10</text>
+<text x="430" y="333" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#202a3a">MPI_Reduce (MPI_MINLOC) → P0, koren 0</text>
+<text x="430" y="360" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#202a3a">MPI_Bcast (izabrani rang) → svi, koren 0</text>
+<text x="430" y="387" text-anchor="start" font-family="system-ui,sans-serif" font-size="15" fill="#202a3a">MPI_Reduce (MPI_SUM) → P1, koren 1</text>
+<text x="430" y="414" text-anchor="start" font-family="system-ui,sans-serif" font-size="14" fill="#202a3a">Komunikator za sve tri operacije: MPI_COMM_WORLD</text>
+</svg>
