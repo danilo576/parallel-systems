@@ -22,6 +22,7 @@
 - Ne koristi `MPI_UNDEFINED` u rešenjima zadataka.
 - Za `MPI_COMM_WORLD` uvek koristi makro `MCW` definisan kao `#define MCW MPI_COMM_WORLD`.
 - Ne koristi `MPI_Scatterv` u rešenjima zadataka. Za raspodelu koristi `MPI_Scatter` uz odgovarajuće izvedene tipove i komunikatore.
+- Ne koristi `MPI_Gatherv` u rešenjima zadataka. Za skupljanje blokova različitih veličina koristi `MPI_Send` i `MPI_Recv` kada zadatak to dozvoljava.
 - Ne koristi `MPI_Allreduce` u rešenjima zadataka. Kada rezultat redukcije treba svim procesima, koristi `MPI_Reduce` i `MPI_Bcast`.
 - Za svaki MPI zadatak generiši sliku kao skicu raspodele podataka po procesima i relevantne komunikacije. Sačuvaj sliku uz zadatak i prikaži je u njegovom `README.md` fajlu.
 - Za MPI zadatke sa logičkim uređenjem procesa koristi stil obojene skice iz `01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/logical_process_grid/exam_2020_07_03/matrix_vector_sketch.png`: prikaži stvarnu matricu sa obojenim vlasništvom elemenata, različitu i doslednu boju za svaki proces, logičku mrežu procesa i strelice relevantnih komunikacija. Raspodelu i indekse prilagodi konkretnom zadatku.
