@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="310" viewBox="0 0 850 310" role="img" aria-labelledby="title">
+  <title id="title">Raspodela donjeg trougla matrice A iz P0 svakom procesu Pi</title>
+  <rect width="850" height="310" rx="14" fill="#faf7ef"/>
+  <g font-family="sans-serif" text-anchor="middle" fill="#203344">
+    <g font-size="20" font-weight="bold">
+      <text x="149" y="42">P0 · matrica A</text>
+      <text x="701" y="42">Svaki Pᵢ · matrica C</text>
+    </g>
+    <g transform="translate(45 64)">
+      <rect width="208" height="168" fill="#eeeae1"/>
+      <path d="M0 0H52V42H104V84H156V126H208V168H0Z" fill="#bfe0d2"/>
+      <path d="M0 0H208V168H0ZM52 0V168M104 0V168M156 0V168M0 42H208M0 84H208M0 126H208" fill="none" stroke="#718783"/>
+      <g font-size="19">
+        <text y="27"><tspan x="26">a₀₀</tspan><tspan x="78">a₀₁</tspan><tspan x="130">a₀₂</tspan><tspan x="182">a₀₃</tspan></text>
+        <text y="69"><tspan x="26">a₁₀</tspan><tspan x="78">a₁₁</tspan><tspan x="130">a₁₂</tspan><tspan x="182">a₁₃</tspan></text>
+        <text y="111"><tspan x="26">a₂₀</tspan><tspan x="78">a₂₁</tspan><tspan x="130">a₂₂</tspan><tspan x="182">a₂₃</tspan></text>
+        <text y="153"><tspan x="26">a₃₀</tspan><tspan x="78">a₃₁</tspan><tspan x="130">a₃₂</tspan><tspan x="182">a₃₃</tspan></text>
+      </g>
+    </g>
+    <g transform="translate(597 64)">
+      <rect width="208" height="168" fill="#eeeae1"/>
+      <path d="M0 0H156V84H104V168H0Z" fill="#bfe0d2"/>
+      <path d="M0 0H208V168H0ZM52 0V168M104 0V168M156 0V168M0 42H208M0 84H208M0 126H208" fill="none" stroke="#718783"/>
+      <g font-size="19">
+        <text y="27"><tspan x="26">a₀₀</tspan><tspan x="78">a₂₁</tspan><tspan x="130">a₃₂</tspan><tspan x="182">0</tspan></text>
+        <text y="69"><tspan x="26">a₁₀</tspan><tspan x="78">a₂₂</tspan><tspan x="130">a₃₃</tspan><tspan x="182">0</tspan></text>
+        <text y="111"><tspan x="26">a₁₁</tspan><tspan x="78">a₃₀</tspan><tspan x="130">0</tspan><tspan x="182">0</tspan></text>
+        <text y="153"><tspan x="26">a₂₀</tspan><tspan x="78">a₃₁</tspan><tspan x="130">0</tspan><tspan x="182">0</tspan></text>
+      </g>
+    </g>
+    <text x="425" y="111" font-size="16" font-weight="bold">MPI_Send → MPI_Recv</text>
+    <path d="M277 134H570M559 125L570 134L559 143" fill="none" stroke="#203344" stroke-width="2.5"/>
+    <text x="425" y="162" font-size="15">Jedna poruka za svaki i &gt; 0 · MCW</text>
+    <text x="149" y="259" font-size="16">Čitanje po vrstama</text>
+    <text x="701" y="259" font-size="16">Upis po kolonama</text>
+    <text x="425" y="287" font-size="17">a₀₀, a₁₀, a₁₁, a₂₀, a₂₁, a₂₂, a₃₀, a₃₁, a₃₂, a₃₃</text>
+  </g>
+</svg>
