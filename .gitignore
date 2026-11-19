@@ -35,3 +35,6 @@ CMakeFiles/
 
 # Lokalni materijali za Paralelne sisteme.
 /01 - Current Accreditation/04 - Additional Materials/Paralelni sistemi/
+
+# Skica uz rešenje zadatka za MPI-IO.
+!/01 - Current Accreditation/02 - Practical Exercises/01 - MPI/exercises/parallel_io/exam_2022_07_07/file_io_sketch.svg
