@@ -1,0 +1,10 @@
+Nastavni list na srpskom latinicom „Paralelni upis blokova — 03.09.2021.” u stilu reference, svetli papir, pastelne boje, jasni indeksi, landscape. Referenca samo za stil. Tri faze. 1) „file1.dat” vodoravna traka sa TAČNO šest obojenih polja sleva nadesno: P5 P4 P3 P2 P1 P0, ispod redom početni indeksi 0 9 18 27 36 45. Iznad strelica prema traci „MPI_File_seek + MPI_File_write_all (MCW)”. 2) Strelica od trake do primera „P4: MPI_File_read_at”, tekst „indeksi 9–17 → vrednosti 36–44”, „Provera pročitanih vrednosti”. 3) „file2.dat”, strelica prema matrici „MPI_File_set_view + MPI_File_write_all (MCW)”. Prikaži zasebnu mrežu procesa 2×3, prvi red P0 P1 P2, drugi P3 P4 P5. Koristi iste boje svuda: P0 plava, P1 zelena, P2 narandžasta, P3 ljubičasta, P4 ružičasta, P5 tirkizna. Nacrtaj tačno 6 redova i 9 kolona, indeksi redova 0,1,2,3,4,5 i kolona 0,1,2,3,4,5,6,7,8. Svaki proces ima svoj obojeni blok 3×3. Tačne vrednosti po redovima, sa grupama od po tri istobojne ćelije:
+0 1 2 | 9 10 11 | 18 19 20
+3 4 5 | 12 13 14 | 21 22 23
+6 7 8 | 15 16 17 | 24 25 26
+27 28 29 | 36 37 38 | 45 46 47
+30 31 32 | 39 40 41 | 48 49 50
+33 34 35 | 42 43 44 | 51 52 53
+Gornja tri reda boje P0 P1 P2, donja tri P3 P4 P5. Ispod matrice „P4: početni indeks 3 × 9 + 3 = 30” i „MPI_Type_vector(3, 3, 9, MPI_INT)”. Mala napomena „M i N: MPI_Bcast (MCW, root = 0)”. Sažeto, galerijski čist raspored, strogo precizne ćelije.
+
+Make two tiny edits to this exact existing worksheet. In the pale orange subtitle beneath the title, change “N = 6” to “M = 6, N = 9”. In panel Faza 3 reverse the single green arrow between the function box and the file2.dat label so it points LEFT toward file2.dat (functions write INTO file2.dat). Preserve every other pixel and especially all matrix numbers, process colors, axis labels, and text.
