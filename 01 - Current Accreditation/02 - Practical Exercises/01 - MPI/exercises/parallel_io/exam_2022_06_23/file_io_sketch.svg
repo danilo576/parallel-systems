@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 570" role="img" aria-labelledby="title">
+<title id="title">MPI-IO za četiri procesa</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#475569"/></marker></defs>
+<rect width="760" height="570" rx="16" fill="#faf8f2"/>
+<g font-family="system-ui,sans-serif" fill="#182a40">
+<text x="40" y="41" font-size="25" font-weight="700">Paralelni upis i čitanje · N = 4</text>
+<text x="40" y="80" font-size="18" font-weight="700">1. prva.dat · MPI_File_seek + MPI_File_write_all</text>
+<text x="40" y="174" font-size="18" font-weight="700">2. MPI_File_read_shared · jedan mogući redosled čitanja</text>
+<text x="40" y="328" font-size="18" font-weight="700">3. druga.dat · MPI_File_set_view + MPI_File_write_all</text>
+
+<rect x="40" y="95" width="170" height="42" fill="#d8eafd" stroke="#64748b"/>
+<text x="125" y="121" text-anchor="middle" font-size="15">P0 · ABCD · bajt 0</text>
+<rect x="40" y="192" width="170" height="33" fill="#fff" stroke="#64748b"/>
+<text x="125" y="214" text-anchor="middle" font-size="15">ABCD</text>
+<path d="M125 228v25" stroke="#475569" marker-end="url(#arrow)"/>
+<rect x="40" y="261" width="170" height="34" fill="#dcefdc" stroke="#64748b"/>
+<text x="125" y="283" text-anchor="middle" font-size="15">P2</text>
+<rect x="210" y="95" width="170" height="42" fill="#fce2cb" stroke="#64748b"/>
+<text x="295" y="121" text-anchor="middle" font-size="15">P1 · EFGH · bajt 4</text>
+<rect x="210" y="192" width="170" height="33" fill="#fff" stroke="#64748b"/>
+<text x="295" y="214" text-anchor="middle" font-size="15">EFGH</text>
+<path d="M295 228v25" stroke="#475569" marker-end="url(#arrow)"/>
+<rect x="210" y="261" width="170" height="34" fill="#eadcf8" stroke="#64748b"/>
+<text x="295" y="283" text-anchor="middle" font-size="15">P3</text>
+<rect x="380" y="95" width="170" height="42" fill="#dcefdc" stroke="#64748b"/>
+<text x="465" y="121" text-anchor="middle" font-size="15">P2 · IJKL · bajt 8</text>
+<rect x="380" y="192" width="170" height="33" fill="#fff" stroke="#64748b"/>
+<text x="465" y="214" text-anchor="middle" font-size="15">IJKL</text>
+<path d="M465 228v25" stroke="#475569" marker-end="url(#arrow)"/>
+<rect x="380" y="261" width="170" height="34" fill="#d8eafd" stroke="#64748b"/>
+<text x="465" y="283" text-anchor="middle" font-size="15">P0</text>
+<rect x="550" y="95" width="170" height="42" fill="#eadcf8" stroke="#64748b"/>
+<text x="635" y="121" text-anchor="middle" font-size="15">P3 · MNOP · bajt 12</text>
+<rect x="550" y="192" width="170" height="33" fill="#fff" stroke="#64748b"/>
+<text x="635" y="214" text-anchor="middle" font-size="15">MNOP</text>
+<path d="M635 228v25" stroke="#475569" marker-end="url(#arrow)"/>
+<rect x="550" y="261" width="170" height="34" fill="#fce2cb" stroke="#64748b"/>
+<text x="635" y="283" text-anchor="middle" font-size="15">P1</text>
+<text x="152" y="359" text-anchor="middle" font-size="15">P0</text>
+<text x="296" y="359" text-anchor="middle" font-size="15">P1</text>
+<text x="440" y="359" text-anchor="middle" font-size="15">P2</text>
+<text x="584" y="359" text-anchor="middle" font-size="15">P3</text>
+<text x="116" y="386" text-anchor="middle" font-size="15">0</text>
+<text x="188" y="386" text-anchor="middle" font-size="15">1</text>
+<text x="260" y="386" text-anchor="middle" font-size="15">2</text>
+<text x="332" y="386" text-anchor="middle" font-size="15">3</text>
+<text x="404" y="386" text-anchor="middle" font-size="15">4</text>
+<text x="476" y="386" text-anchor="middle" font-size="15">5</text>
+<text x="548" y="386" text-anchor="middle" font-size="15">6</text>
+<text x="620" y="386" text-anchor="middle" font-size="15">7</text>
+<text x="56" y="421" text-anchor="middle" font-size="15">0</text>
+<rect x="80" y="397" width="72" height="36" fill="#d8eafd" stroke="#64748b"/>
+<text x="116" y="421" text-anchor="middle" font-size="15">I</text>
+<rect x="152" y="397" width="72" height="36" fill="#d8eafd" stroke="#64748b"/>
+<text x="188" y="421" text-anchor="middle" font-size="15">I</text>
+<rect x="224" y="397" width="72" height="36" fill="#fce2cb" stroke="#64748b"/>
+<text x="260" y="421" text-anchor="middle" font-size="15">M</text>
+<rect x="296" y="397" width="72" height="36" fill="#fce2cb" stroke="#64748b"/>
+<text x="332" y="421" text-anchor="middle" font-size="15">M</text>
+<rect x="368" y="397" width="72" height="36" fill="#dcefdc" stroke="#64748b"/>
+<text x="404" y="421" text-anchor="middle" font-size="15">A</text>
+<rect x="440" y="397" width="72" height="36" fill="#dcefdc" stroke="#64748b"/>
+<text x="476" y="421" text-anchor="middle" font-size="15">A</text>
+<rect x="512" y="397" width="72" height="36" fill="#eadcf8" stroke="#64748b"/>
+<text x="548" y="421" text-anchor="middle" font-size="15">E</text>
+<rect x="584" y="397" width="72" height="36" fill="#eadcf8" stroke="#64748b"/>
+<text x="620" y="421" text-anchor="middle" font-size="15">E</text>
+<text x="56" y="457" text-anchor="middle" font-size="15">1</text>
+<rect x="80" y="433" width="72" height="36" fill="#d8eafd" stroke="#64748b"/>
+<text x="116" y="457" text-anchor="middle" font-size="15">J</text>
+<rect x="152" y="433" width="72" height="36" fill="#d8eafd" stroke="#64748b"/>
+<text x="188" y="457" text-anchor="middle" font-size="15">J</text>
+<rect x="224" y="433" width="72" height="36" fill="#fce2cb" stroke="#64748b"/>
+<text x="260" y="457" text-anchor="middle" font-size="15">N</text>
+<rect x="296" y="433" width="72" height="36" fill="#fce2cb" stroke="#64748b"/>
+<text x="332" y="457" text-anchor="middle" font-size="15">N</text>
+<rect x="368" y="433" width="72" height="36" fill="#dcefdc" stroke="#64748b"/>
+<text x="404" y="457" text-anchor="middle" font-size="15">B</text>
+<rect x="440" y="433" width="72" height="36" fill="#dcefdc" stroke="#64748b"/>
+<text x="476" y="457" text-anchor="middle" font-size="15">B</text>
+<rect x="512" y="433" width="72" height="36" fill="#eadcf8" stroke="#64748b"/>
+<text x="548" y="457" text-anchor="middle" font-size="15">F</text>
+<rect x="584" y="433" width="72" height="36" fill="#eadcf8" stroke="#64748b"/>
+<text x="620" y="457" text-anchor="middle" font-size="15">F</text>
+<text x="56" y="493" text-anchor="middle" font-size="15">2</text>
+<rect x="80" y="469" width="72" height="36" fill="#d8eafd" stroke="#64748b"/>
+<text x="116" y="493" text-anchor="middle" font-size="15">K</text>
+<rect x="152" y="469" width="72" height="36" fill="#d8eafd" stroke="#64748b"/>
+<text x="188" y="493" text-anchor="middle" font-size="15">K</text>
+<rect x="224" y="469" width="72" height="36" fill="#fce2cb" stroke="#64748b"/>
+<text x="260" y="493" text-anchor="middle" font-size="15">O</text>
+<rect x="296" y="469" width="72" height="36" fill="#fce2cb" stroke="#64748b"/>
+<text x="332" y="493" text-anchor="middle" font-size="15">O</text>
+<rect x="368" y="469" width="72" height="36" fill="#dcefdc" stroke="#64748b"/>
+<text x="404" y="493" text-anchor="middle" font-size="15">C</text>
+<rect x="440" y="469" width="72" height="36" fill="#dcefdc" stroke="#64748b"/>
+<text x="476" y="493" text-anchor="middle" font-size="15">C</text>
+<rect x="512" y="469" width="72" height="36" fill="#eadcf8" stroke="#64748b"/>
+<text x="548" y="493" text-anchor="middle" font-size="15">G</text>
+<rect x="584" y="469" width="72" height="36" fill="#eadcf8" stroke="#64748b"/>
+<text x="620" y="493" text-anchor="middle" font-size="15">G</text>
+<text x="56" y="529" text-anchor="middle" font-size="15">3</text>
+<rect x="80" y="505" width="72" height="36" fill="#d8eafd" stroke="#64748b"/>
+<text x="116" y="529" text-anchor="middle" font-size="15">L</text>
+<rect x="152" y="505" width="72" height="36" fill="#d8eafd" stroke="#64748b"/>
+<text x="188" y="529" text-anchor="middle" font-size="15">L</text>
+<rect x="224" y="505" width="72" height="36" fill="#fce2cb" stroke="#64748b"/>
+<text x="260" y="529" text-anchor="middle" font-size="15">P</text>
+<rect x="296" y="505" width="72" height="36" fill="#fce2cb" stroke="#64748b"/>
+<text x="332" y="529" text-anchor="middle" font-size="15">P</text>
+<rect x="368" y="505" width="72" height="36" fill="#dcefdc" stroke="#64748b"/>
+<text x="404" y="529" text-anchor="middle" font-size="15">D</text>
+<rect x="440" y="505" width="72" height="36" fill="#dcefdc" stroke="#64748b"/>
+<text x="476" y="529" text-anchor="middle" font-size="15">D</text>
+<rect x="512" y="505" width="72" height="36" fill="#eadcf8" stroke="#64748b"/>
+<text x="548" y="529" text-anchor="middle" font-size="15">H</text>
+<rect x="584" y="505" width="72" height="36" fill="#eadcf8" stroke="#64748b"/>
+<text x="620" y="529" text-anchor="middle" font-size="15">H</text>
+</g></svg>
