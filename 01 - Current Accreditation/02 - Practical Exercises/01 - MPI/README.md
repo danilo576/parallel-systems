@@ -24,6 +24,7 @@
 | [exercises/parallel_io/exam_2021_10_07](exercises/parallel_io/exam_2021_10_07) | MPI-IO, upis blokova rastuće dužine uz računanje — 07.10.2021, zadatak 3. |
 | [exercises/parallel_io/exam_2022_01_28](exercises/parallel_io/exam_2022_01_28) | MPI-IO, zajedničko čitanje i kolektivni upis — 28.01.2022. |
 | [exercises/parallel_io/exam_2022_12_05](exercises/parallel_io/exam_2022_12_05) | MPI-IO, upis blokova rastuće dužine — 05.12.2022. |
+| [exercises/parallel_io/exam_2023_09_22](exercises/parallel_io/exam_2023_09_22) | MPI-IO, množenje matrica po blokovima vrsta i izbor odredišnog procesa po najmanjoj sumi — 22.09.2023, zadatak 1. |
 
 ## Zajednički fajlovi
 
