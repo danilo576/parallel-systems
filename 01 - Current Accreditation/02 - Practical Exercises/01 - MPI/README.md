@@ -10,6 +10,7 @@
 | [15.05.2015, I kolokvijum, zadatak 3](exercises/basic_communication/colloquium_2015_05_15) | Slanje jednog podatka od P0 kroz stablo |
 | [exercises/basic_communication/tree_sum](exercises/basic_communication/tree_sum) | Sabiranje u strukturi stabla — 04.07.2015, zadatak 4(a). |
 | [exercises/basic_communication/exam_2019_06_12](exercises/basic_communication/exam_2019_06_12) | Prosleđivanje niza zaposlenih — 12.06.2019, zadatak 4(a). |
+| [20.07.2026, zadatak 7b](exercises/basic_communication/exam_2026_07_20) | Proizvod vrednosti svih procesa osim P0, sa ispisom iz P5 |
 | [exercises/matrix_matrix_products/matrix_product](exercises/matrix_matrix_products/matrix_product) | Množenje sa delimičnim doprinosima rezultatu |
 | [exercises/matrix_matrix_products/cyclic_matrix_product](exercises/matrix_matrix_products/cyclic_matrix_product) | Ciklična raspodela kolona, kod i skica |
 | [exercises/matrix_matrix_products/column_matrix_product](exercises/matrix_matrix_products/column_matrix_product) | Blokovska raspodela kolona, kod i skica |
